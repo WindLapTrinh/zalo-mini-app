@@ -1,0 +1,50 @@
+.text-branch{
+    font-size: 13px;
+}
+.house-school{
+    display: contents;
+}
+.sum-school{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.text-calender{
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.text-hotline{
+    font-size: 16px;
+}
+.text-detail{
+    line-height: 1.6;
+}
+.oder-book{
+    position: fixed;
+    bottom: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    
+}
+.btn-book{
+    width: 50px;
+}
+.btn-book {
+    width: 180px;
+    background-color: #8861bb;
+    color: #fff;
+}
+
+.btn-book:hover{
+    background-color: #30c840;
+    transition: 0.5;
+}
+.btn-submit{
+    background-color: #8861bb;
+    color: #fff;
+}
+.btn-submit:hover{
+    background-color: #30c840;
+    transition: 0.5;
+}

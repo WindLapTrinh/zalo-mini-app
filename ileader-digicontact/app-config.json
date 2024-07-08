@@ -1,0 +1,18 @@
+{
+  "app": {
+    "title": "iLeader Digicontact",
+    "headerTitle": "iLeader Digicontact",
+    "headerColor": "#8861bb",
+    "textColor": "white",
+    "statusBarColor": "#8861bb",
+    "leftButton": "back",
+    "statusBar": "normal",
+    "actionBarHidden": false,
+    "hideAndroidBottomNavigationBar": false,
+    "hideIOSSafeAreaBottom": false
+  },
+  "debug": false,
+  "listCSS": [],
+  "listSyncJS": [],
+  "listAsyncJS": []
+}
