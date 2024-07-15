@@ -44,9 +44,10 @@ export const listProductOptions: Options[] = [
 
 export const listCategories = [
   "Tất cả sản phẩm",
-  " Quần áo",
+  "Nike",
+  "Jordan",
+  "New Balance",
   "Dụng cụ thể thao",
-  "Giày dép",
 ];
 export const listAddress = [
   "TP Hồ Chí Minh",
@@ -58,16 +59,16 @@ export const listAddress = [
   "Hội An",
 ];
 export const listNameProducts = [
-  "Dell Computer Monitor",
-  "Coach Tabby 26 for sale",
-  "Gaming Chair, local pickup only",
-  "Playstation 4 Blue Exclusive Limited Edition (with games)",
-  "Heimer Miller Sofa (Mint Condition)",
-  "Gopro hero 7 (with receipt)",
-  "Lego StarWar edition",
-  "Macbook Pro 16 inch (2020 ) For Sale",
-  "DJI Mavic Pro 2",
-  "Brand New Bike, Local buyer only",
+  "Nike Dunk Low",
+  "Nike Air Jordan 1 High",
+  "Nike Air Force 1 Low White / Black",
+  "Nike Dunk Low 'White Hyper Royal'",
+  "Jordan 4 Amethyst Wave",
+  "Nike Air Jordan 1 High",
+  "New Balance 550 White Timberwolf RainCloud",
+  "New Balance 550 White Beick Red",
+  "New Balance M 577 Cob Made In UK Tan/Black",
+  "Auth New Balance 990v5 Navy",
 ];
 export const listPrices = [
   { salePrice: "239000", retailPrice: "350000" },
