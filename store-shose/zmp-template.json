@@ -1,0 +1,25 @@
+{
+  "name": "ZMP Ecommerce Store",
+  "options": {
+    "primaryColor": {
+      "title": "Primary Color",
+      "description": "Header, Buttons, links, icons, highlited items color,...",
+      "type": "color",
+      "optional": true
+    },
+    "shippingFee": {
+      "title": "Shipping Fee",
+      "description": "Fixed amount needed to be paid on each order, set to 0 if you want to free ship",
+      "type": "number"
+    },
+    "searchBar": {
+      "title": "Enable search bar",
+      "type": "boolean"
+    },
+    "oaIDtoOpenChat": {
+      "title": "OA ID",
+      "description": "When a user clicks the chat button, the OA account's ID is used to open the chat",
+      "type": "string"
+    }
+  }
+}
