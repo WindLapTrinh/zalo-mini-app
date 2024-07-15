@@ -1,0 +1,43 @@
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.header-plc{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.login-container{
+  background-color: #fff;
+  height: auto;
+  overflow: hidden;
+  padding: 20px;
+}
+.zaui-list{
+  /* background-color: #8861bb; */
+  color: black;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(86, 75, 75, 0.1);
+
+}
+
+.zaui-list-item{
+  margin-bottom: 0px !important;
+}
+.zaui-list-item:hover{
+  background-color: #ccc;
+  border-radius: 5px ;
+  color: black ;
+
+}
+.zaui-list-item-subtitle{
+  color: #fff !important;
+}
+.zaui-routes{
+  background-color: #fff;
+}
+.zaui-icon{
+  color: #30c840 !important;
+  font-weight: bold;
+}
+

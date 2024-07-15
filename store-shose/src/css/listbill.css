@@ -1,0 +1,61 @@
+
+.section-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.task-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.task-box-bill {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+  transition: box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  width: 315px ;
+
+}
+.item-bill {
+  margin-bottom: 70px;
+  text-align: left;
+  width: 380px;
+  background-color: #fff !important;
+
+}
+
+
+.task-box-bill:hover {
+  background-color: #2270ec;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+}
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-title-bill {
+  font-weight: bold;
+}
+
+.task-status {
+  color: #28a745; 
+}
+
+.button-container {
+  text-align: center;
+}
+.text-right{
+  color: #2270ec !important;
+  text-align: right !important;
+}

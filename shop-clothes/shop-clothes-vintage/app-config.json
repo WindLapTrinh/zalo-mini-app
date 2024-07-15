@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "ZaUI Coffee",
+    "title": "Shop Wind",
     "headerColor": "",
     "textColor": "black",
     "statusBarColor": "#ffffff",
@@ -26,6 +26,6 @@
     "primaryColor": "#006af5",
     "prefixCurrencySymbol": false,
     "currencySymbol": "đ",
-    "headerLogo": ""
+    "headerLogo": "/images/logo.jpg"
   }
 }

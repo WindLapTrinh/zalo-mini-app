@@ -1,0 +1,200 @@
+.zaui-routes-item {
+  padding: 10px !important;
+}
+.zaui-text-title-small {
+  float: left;
+}
+.zaui-routes {
+  background-color: rgb(233, 234, 236) !important;
+}
+.plc-action {
+  background-color: rgb(233, 234, 236) !important;
+}
+.call-admin {
+  background: #fff !important;
+  color: #8861bb;
+  width: 100%;
+  border-radius: 5px;
+  height: 100px;
+}
+.link-admin {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.text-success {
+  font-size: 14px;
+  padding: 10px;
+  margin-right: 10px;
+  color: #333;
+}
+.text-title {
+  color: #8861bb;
+  font-weight: bold;
+}
+.icon-admin {
+  margin-left: 10px;
+  font-size: 70px;
+  margin-top: 15px;
+  color: #30c840;
+}
+/* register  */
+.call-register {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.form-date{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.date-left,
+.date-right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 8px;
+}
+.form-register {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #8861bb;
+  background-color: #fff;
+  width: 100%;
+  height: 90px;
+  border-radius: 5px;
+}
+.icon-left {
+  margin-right: 170px !important;
+}
+.icon-left,
+.icon-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 8px;
+}
+
+.icon-user,
+.icon-register {
+  font-size: 40px;
+  color: #30c840;
+}
+
+.text-icon {
+  margin: 0;
+  text-align: center;
+  color: #333;
+}
+.text-detail {
+  font-weight: 200;
+  text-align: left;
+  width: 100%;
+  background: #fff;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.checked {
+  border-radius: 5px;
+  color: #333;
+  font-weight: 100;
+}
+.unchecked {
+  color: #8861bb;
+  background-color: #fff;
+  border-radius: 5px;
+}
+/* Style the notification badge to include text */
+.item-user {
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  border-radius: 5px;
+  color: black;
+  transition: 0.5s;
+  border-left: 5px solid #30c840;
+  margin-bottom: 10px !important;
+}
+
+.img-login {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  margin-top: -2px;
+}
+.title-login {
+  margin-top: 6px !important;
+}
+.date-user {
+  color: black;
+  font-weight: 400;
+  font-size: 12px;
+}
+.icon-userlogin {
+  line-height: 55px;
+  font-size: 45px;
+}
+.img-lg {
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.accounting-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.zaui-bottom-navigation-content {
+  padding-top: 15px !important;
+}
+.red-circle {
+  position: absolute;
+  top: -7px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 0px 7px;
+  font-size: 12px;
+}
+.red-box-notice {
+  position: absolute;
+  top: 1px;
+  right: -29px;
+  background-color: red;
+  color: white;
+  border-radius: 30%;
+  padding: 0px 8px;
+  font-size: 12px;
+}
+.btn-scorses {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  bottom: 10px;
+  width: 45px !important;
+  background-color: #8861bb;
+}
+.section-container {
+  position: relative;
+  padding-top: 45px !important;
+}
+.title-scores{
+  margin-left: 8px !important;
+}
+.text-student{
+  text-align: center;
+  color: #30c840;
+}
+.text-month,
+.text-year{
+  text-align: center;
+}
+.zaui-select-option{
+  text-align: center !important;
+
+}

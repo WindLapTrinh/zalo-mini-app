@@ -46,8 +46,8 @@ export function calcFinalPrice(product: Product, options?: SelectedOptions) {
   return finalPrice;
 }
 
-export function getDummyImage(filename: string) {
-  return `https://stc-zmp.zadn.vn/templates/zaui-coffee/dummy/${filename}`;
+export function getImage(filename: string) {
+  return `/images/${filename}`;
 }
 
 export function isIdentical(

@@ -1,0 +1,58 @@
+body.no-scrollbar {
+  overflow: hidden; 
+}
+.no-scrollbar {
+  background-image: url("../../public/images/login_banner_3.jpg");
+}
+.password-link {
+  flex: 1; 
+  text-align: center;
+}
+
+.btn-login{
+  background-color: #8861bb;
+    color: #fff;
+}
+
+.form-container {
+  background-color: #001d4d;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 20px;
+  margin-top: 120px;
+}
+.custom-label {
+  font-size: 20px;
+  color: #fff;
+}
+
+.link-add {
+  margin-left: 60px;
+}
+.icon-add {
+  font-size: 30px;
+}
+.title-login{
+  text-align: center;
+  font-size: 16px;
+}
+.img-login{
+  margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+.error-login{
+  background-color: rgb(252, 185, 185);
+  margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+}
+.icphone-login{
+  margin-left: 10px;
+   font-size: 50px;
+    margin-top: 15px; 
+    color: #30c840;
+}
