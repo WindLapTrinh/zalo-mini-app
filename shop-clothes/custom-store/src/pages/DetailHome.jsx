@@ -11,7 +11,8 @@ import {
   Swiper,
   Text,
   useTheme,
-  Header
+  Header,
+  Tabs,
 } from "zmp-ui";
 import "../css/detailHome.css";
 
@@ -27,10 +28,9 @@ const DetailHome = (props) => {
   return (
     <Page className="container plc-action">
       <Header
-      className="app-header no-border pl-4 flex-none pb-[6px]"
-      showBackIcon={false}
-      title={
-        (
+        className="app-header no-border pl-4 flex-none pb-[6px]"
+        showBackIcon={false}
+        title={
           <Box flex alignItems="center" className="space-x-2 pd-2">
             <img
               className="w-8 h-8 rounded-lg border-inset"
@@ -38,14 +38,14 @@ const DetailHome = (props) => {
             />
             <Box>
               <Text.Title size="small">Wind Lập Trình</Text.Title>
-              <br/>
-              <Text size="xxSmall" className="text-gray col-12">Welcome, Nguyễn Thanh Phong!</Text>
+              <br />
+              <Text size="xxSmall" className="text-gray col-12">
+                Welcome, Nguyễn Thanh Phong!
+              </Text>
             </Box>
-            
           </Box>
-        )
-      }
-    />
+        }
+      />
       <Box
         mt={6}
         flex
@@ -58,20 +58,13 @@ const DetailHome = (props) => {
             <img
               className="slide-img"
               src="/images/banner-1.jpg"
-              alt="slide-1"
-            />
-          </Swiper.Slide>
-          <Swiper.Slide>
-            <img
-              className="slide-img"
-              src="/images/banner-2.webp"
               alt="slide-2"
             />
           </Swiper.Slide>
           <Swiper.Slide>
             <img
               className="slide-img"
-              src="/images/banner-3.webp"
+              src="/images/banner-4.webp"
               alt="slide-2"
             />
           </Swiper.Slide>
@@ -85,27 +78,29 @@ const DetailHome = (props) => {
         </Swiper>
       </Box>
 
-      <Box mt={6} className="call-admin">
-        <a className="link-admin" onClick={openChatScreen}>
-          <p className="text-success">
-            Bấm vào đây để kết nối với Trung Tâm SLK Solutions!
-          </p>
-          <Icon className="icon-admin" icon="zi-user-window-solid" />
-        </a>
+      {/* call api service store */}
+      <Box className="service-store">
+        <Box className="slider-container bg-white p-4">
+          {[...Array(10)].map((_, index) => (
+            <div
+              key={index}
+              className="slider-item flex flex-col space-y-2 items-center"
+            >
+              <img
+                className="w-12 h-12 boder-image"
+                src="/images/logo.png"
+                alt="Product"
+              />
+              <Text size="xxSmall" className="text-gray">
+                Sản phẩm
+              </Text>
+            </div>
+          ))}
+        </Box>
       </Box>
-      <Box mt={6} className="call-register">
-        <a className="form-register">
-          <div className="icon-left">
-            <a>
-              <Icon className="icon-register" icon="zi-calendar-solid" />
-            </a>
-            <p className="text-icon ">Đăng ký học viên</p>
-          </div>
-          <div className="icon-right">
-            <Icon className="icon-user" icon="zi-user-solid" />
-            <p className="text-icon ">Học viên</p>
-          </div>
-        </a>
+
+      <Box className="category-product">
+        
       </Box>
       <Box mt={6}>
         <Text.Title className="text-title">

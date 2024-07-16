@@ -7,7 +7,7 @@ import { RecoilRoot } from "recoil";
 import Notice from "../pages/Notice.jsx";
 import DayScorses from "../pages/DayScorses.jsx";
 import Register from "../pages/Register.jsx";
-import DetailHome from "../pages/DetailHome.jsx";
+import Home from "../pages/home/Home.jsx";
 import TimeTable from "../pages/TimeTable.jsx";
 import TranScript from "../pages/TranScript.jsx";
 import DetailBranch from "../pages/DetailBranch.jsx";
@@ -31,7 +31,7 @@ const MyApp = () => {
         <SnackbarProvider>
           <ZMPRouter>
             <AnimationRoutes>
-              <Route path="/" element={<DetailHome setTasks={setTasks} tasks={tasks} />} />
+              <Route path="/" element={<Home setTasks={setTasks} tasks={tasks} />} />
               <Route path="/notice" element={<Notice setTasks={setTasks} tasks={tasks} />}/>
               <Route path="/dayscorses" element={<DayScorses setTasks={setTasks} tasks={tasks} />} />
               <Route path="/register" element={<Register setTasks={setTasks} tasks={tasks} />} />
