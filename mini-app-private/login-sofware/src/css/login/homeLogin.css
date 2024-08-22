@@ -5,7 +5,7 @@
     height: 100vh;
     background-image: url('/images/login/banner-1.jpg'); /* Replace with the actual image path */
     background-size: cover;
-    background-position: center;
+    background-position: left;
   }
   
   .login-container {

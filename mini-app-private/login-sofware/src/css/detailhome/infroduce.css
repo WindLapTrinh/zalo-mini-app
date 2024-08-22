@@ -1,0 +1,25 @@
+/* infroduce.css */
+
+.introduce-home {
+    display: flex;
+    justify-content: space-between; /* Căn chỉnh các phần tử nằm cách nhau */
+    align-items: center; /* Căn chỉnh các phần tử theo chiều dọc */
+    padding: 10px 10px 0px 10px;  }
+  
+  .fouder, .free-ship {
+    display: flex;
+    align-items: center; /* Căn chỉnh các phần tử bên trong div theo chiều dọc */
+  }
+  
+  .fouder span, .free-ship span {
+    margin-left: 8px; /* Khoảng cách giữa icon và text */
+    font-size: 11px;
+    color: #ffffff;
+  }
+  
+  .fouder svg, .free-ship svg {
+    font-size: 14px; /* Kích thước icon */
+    color: #333; /* Màu icon, có thể thay đổi tùy ý */
+    color: #ffffff;
+  }
+  

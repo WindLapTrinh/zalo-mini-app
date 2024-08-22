@@ -3,13 +3,11 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { BottomNavigation, Icon } from "zmp-ui";
 import { BsCart, BsHouse } from "react-icons/bs";
 import "../../css/detailhome/bottomNavigation.css";
-import { useCart } from "../../pages/shared/common/cart/CartContext";
 
 const CustomBottomNavigation = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { keyTab } = location.state || {};
-  const { getCartCount } = useCart();
 
   const [activeTab, setActiveTab] = useState(keyTab || "home");
 
@@ -63,7 +61,7 @@ const CustomBottomNavigation = () => {
         icon={
           <div className="accounting-icon-wrapper">
             <Icon icon="zi-clock-1" />
-            <div className="red-circle">1</div> {/* Replace 1 with actual notification count if needed */}
+            <div className="red-circle">1</div> 
           </div>
         }
         activeIcon={
@@ -81,13 +79,13 @@ const CustomBottomNavigation = () => {
         icon={
           <div className="accounting-icon-wrapper">
             <BsCart />
-            {getCartCount() > 0 && <div className="red-circle">{getCartCount()}</div>}
+            {<div className="red-circle">1</div>}
           </div>
         }
         activeIcon={
           <div className="accounting-icon-wrapper">
             <BsCart />
-            {getCartCount() > 0 && <div className="red-circle">{getCartCount()}</div>}
+            {<div className="red-circle">1</div>}
           </div>
         }
         onClick={() => handleCart("cart")}

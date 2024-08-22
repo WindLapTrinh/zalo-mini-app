@@ -1,0 +1,47 @@
+/* service store */
+.detail-service{
+ padding: 10px 10px 0px 10px;
+}
+.service-store {
+    background: #ffffff !important;
+      color: black;
+      border-radius: 5px;
+      height: 90px;
+      width: 100%;
+      overflow-x: scroll;
+      white-space: nowrap;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
+  }
+  
+  .service-store {
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+  .category-store::-webkit-scrollbar {
+    display: none; /* Ẩn thanh cuộn ngang */
+  }
+  .service-store::-webkit-scrollbar {
+    display: none; /* Ẩn thanh cuộn ngang */
+  }
+  .category-store::-webkit-scrollbar-thumb {
+    display: none; /* Ẩn thanh cuộn ngang */
+  }
+  
+  .slider-container {
+    display: flex;
+  }
+  
+  .slider-item {
+    flex: 0 0 auto;
+    margin-right: 16px; /* Adjust the gap between items as needed */
+  }
+  .boder-image {
+    border-radius: 50px !important;
+  }
+  .text-service{
+    font-weight: 500;
+    color: black;
+  }
