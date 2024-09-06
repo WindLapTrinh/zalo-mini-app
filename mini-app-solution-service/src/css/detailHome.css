@@ -1,0 +1,33 @@
+.header-home{
+  background: linear-gradient(to bottom, rgb(255 165 61), rgb(254 186 85));
+  border-bottom: 1px solid #c6c5c5;
+}
+
+/* category product */
+.category-product {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px; /* Khoảng cách giữa các phần tử */
+}
+
+.text-gray {
+  color: gray; 
+}
+
+.grid-cols-auto {
+  display: grid;
+}
+.btn-cart{
+  background-color: red;
+  color: #ffffff;
+}
+.icon-active{
+  color: #ffa53d !important;
+}
+
+/* slider */

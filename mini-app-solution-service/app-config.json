@@ -1,0 +1,18 @@
+{
+  "app": {
+    "title": "Shop Wind",
+    "headerTitle": "Shop Wind",
+    "headerColor": "#ffa53d",
+    "textColor": "white",
+    "statusBarColor": "#ffa53d",
+    "leftButton": "back",
+    "statusBar": "normal",
+    "actionBarHidden": false,
+    "hideAndroidBottomNavigationBar": false,
+    "hideIOSSafeAreaBottom": false
+  },
+  "debug": false,
+  "listCSS": [],
+  "listSyncJS": [],
+  "listAsyncJS": []
+}

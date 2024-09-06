@@ -1,0 +1,36 @@
+/* infroduce.css */
+
+.header-container {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+  }
+  
+  .header-list-product {
+    display: flex;
+    align-items: center;
+    white-space: nowrap; 
+  }
+  
+  .icon-list-product {
+    margin-right: 8px; 
+  }
+  
+  .title-list-product {
+    font-size: 14px; 
+    font-weight: bold;
+    white-space: nowrap; /* ngừa việc xuống dòng */
+    margin-right: 10px;
+  }
+  
+  .input-search-product {
+    margin-left: auto; 
+  }
+  
+  .input-search-product .zmp-ui-input {
+    width: 200px;
+  }
+  

@@ -1,0 +1,16 @@
+.method-payment{
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box-shadow */
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    padding: 10px 10px 20px 10px;
+}
+.header-method-payment{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #696f6a;
+    font-weight: 500;
+}

@@ -1,0 +1,115 @@
+/* .product-today{
+  padding: 0px 10px 5px 10px;
+} */
+.category-product {
+    background: rgb(254 186 85);
+    color: #333;
+    border-radius: 5px;
+    height: 86px;
+    width: 100%;
+    height: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    padding: 10px 0px 10px 10px;
+  }
+  
+  .category-product {
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+  .category-product::-webkit-scrollbar {
+    display: none; /* Ẩn thanh cuộn ngang */
+  }
+  .category-store::-webkit-scrollbar-thumb {
+    display: none; /* Ẩn thanh cuộn ngang */
+  }
+  
+  .slider-category {
+    display: flex;
+  }
+  
+  .slider-item {
+    flex: 0 0 auto;
+  }
+  .category-item{
+    margin-right: 10px;
+    border-radius: 5px;
+    background: #ffffff;
+    padding: 6px;
+    width: 132px;
+    height: auto;
+  }
+  .custom-border-image{
+    width: 114px;
+  }
+   .name-product-today{
+    display: block;
+  }
+  .price-product-today{
+    color: #ffa53d;
+    font-weight: bold;
+  } 
+.custom-text-gray {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.name-product-today, .price-product-today {
+  margin: 4px 0;
+}
+  .icon-product-today{
+    float: left;
+    margin-right: 5px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 20px;
+    padding-left: 10px;
+  }
+
+  /* flas sale  */
+  
+  .header-slider-category {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding-right: 10px;
+  }
+  
+  .infomation-sale {
+    display: flex;
+    align-items: center; 
+  }
+  
+  .icon-product-today {
+    margin-right: 6px; 
+  }
+  
+  .title-product {
+    font-size: 14px; 
+    color:#ffffff;
+    font-weight: 500;
+  }
+  
+  .countdown-timer {
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
+  }
+  
+  .countdown-timer div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background-color: #ffffff;
+    border-radius: 34%;
+    border: 1px solid #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    color: #857272;
+  }
+  
