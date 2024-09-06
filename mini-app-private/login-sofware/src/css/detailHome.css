@@ -1,5 +1,5 @@
 .header-home{
-  background: linear-gradient(to bottom, rgb(255 172 27), rgb(238 178 72));
+  background: linear-gradient(to bottom, rgb(9 48 114),rgb(9 48 114));
   transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box-shadow */
   /* border-bottom: 1px solid #c6c5c5; */

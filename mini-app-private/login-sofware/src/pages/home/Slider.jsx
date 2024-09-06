@@ -4,17 +4,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 import bannerOne from "/images/banner/banner-one.jpg";
-import bannerTwo from "/images/banner/banner-two.png";
-import banner4 from "/images/banner/banner-4.jpg";
-import banner5 from "/images/banner/banner-5.png";
-import banner7 from "/images/banner/banner-7.jpg";
-import banner8 from "/images/banner/banner-8.jpg";
-import banner9 from "/images/banner/banner-9.jpg";
+import bannerTwo from "/images/banner/banner-two.jpg";
+import banner3 from "/images/banner/banner-3.jpg";
 import "../../css/detailhome/slider.css";
 
 SwiperCore.use([EffectCoverflow, Pagination]);
 
-const slide_img = [bannerOne, bannerOne, bannerOne, bannerOne, bannerOne, bannerOne, bannerOne];
+const slide_img = [bannerOne, bannerTwo, banner3 ];
 
 const Slider = () => {
   const swiperRef = useRef(null);

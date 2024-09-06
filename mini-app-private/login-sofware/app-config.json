@@ -1,10 +1,10 @@
 {
   "app": {
-    "title": "iZWork",
-    "headerTitle": "iZWork",
-    "headerColor": "orange",
+    "title": "Wind Lập Trình",
+    "headerTitle": "Wind Lập Trình",
+    "headerColor": "#00346b",
     "textColor": "white",
-    "statusBarColor": "orange",
+    "statusBarColor": "#00346b",
     "leftButton": "back",
     "statusBar": "normal",
     "actionBarHidden": false,

@@ -40,7 +40,7 @@ const gotoCategory = (id) => {
 
 const Home = (props) => {
   SetTitleHeader({
-    title: "iZWork",
+    title: "Wind Lập Trình",
   });
   const navigate = useNavigate();
 

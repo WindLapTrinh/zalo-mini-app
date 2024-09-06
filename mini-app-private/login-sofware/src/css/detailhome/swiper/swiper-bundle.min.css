@@ -1,6 +1,6 @@
 
 .category-product {
-    background: rgb(255 170 42);
+    background: rgb(15 43 122);
     color: #333;
     height: 86px;
     width: 100%;
@@ -48,14 +48,14 @@
   }
   .price-product-today{
     float: right;
-    color: #00b815;
+    color: #00346b;
     font-weight: bold;
   }
   .name-product-today{
     display: block;
   }
   .price-product-today{
-    color: #00b815;
+    color: #00346b;
     font-weight: bold;
   } 
 .custom-text-gray {
