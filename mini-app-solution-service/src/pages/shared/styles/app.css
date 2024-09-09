@@ -1,15 +1,23 @@
-/* setting zalo  */
-
-.header {
-  display: none !important;
-}
+/* Ensure the header is properly positioned */
 .box-custom-header {
   position: relative;
+  z-index: 10; /* Ensures the header stays on top */
 }
+
+/* Add padding to the top of the content so it doesn't get hidden under the header */
+.header-home {
+  padding-top: 90px; /* Adjust based on the height of your header */
+}
+
+/* Custom header styles */
 .page-custom-header {
   background-color: #ffa53d;
   color: #ffffff;
   font-weight: 500;
+  z-index: 10; /* Keeps the header above other content */
+  position: fixed; /* Ensures the header stays at the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90px; /* Adjust the height as needed */
 }
-
-/* end setting zalo  */

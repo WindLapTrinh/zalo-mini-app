@@ -58,9 +58,11 @@ const Home = (props) => {
       localStorage.setItem("popupShown", "true");
     }
   }, []);
+
   const handleClosePopup = () => {
     setShowPopup(false);
   };
+
   return (
     <Page className="home">
       <Box className="box-custom-header">
@@ -90,3 +92,4 @@ const Home = (props) => {
 };
 
 export default Home;
+
