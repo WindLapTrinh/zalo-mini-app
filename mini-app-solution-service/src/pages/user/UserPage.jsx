@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Box, Text, List, Icon } from "zmp-ui";
 import SetTitleHeader from "@/pages/shared/hooks/setTitleHeader";
-import CustomBottomNavigation from "@/components/layout/CustomBottomNavigation";
+import CustomBottomNavigation from "../shared/components/CustomBottomNavigation";
 import { openChatScreen } from '../../pages/shared/utils/openChatScreen';
 import useFollowOA from '../../pages/shared/hooks/useFollowOA';
 

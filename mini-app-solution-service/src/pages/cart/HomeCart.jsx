@@ -4,7 +4,7 @@ import SetTitleHeader from "@/pages/shared/hooks/setTitleHeader";
 import ShippingInfo from "./ShippingInfo";
 import InfomationPayment from "./InfomationPayment";
 import OrderProduct from "./OrderProduct";
-import CustomBottomNavigation from "@/components/layout/CustomBottomNavigation";
+import CustomBottomNavigation from "../shared/components/CustomBottomNavigation";
 import InfomationVoucher from "./InfomationVoucher";
 import OrderCart from "../payment/OrderCart";
 

@@ -4,7 +4,9 @@
     display: flex;
     justify-content: space-between; /* Căn chỉnh các phần tử nằm cách nhau */
     align-items: center; /* Căn chỉnh các phần tử theo chiều dọc */
-    padding: 10px 10px 0px 10px;  }
+    padding: 10px 10px 0px 10px; 
+}
+
   
   .fouder, .free-ship {
     display: flex;

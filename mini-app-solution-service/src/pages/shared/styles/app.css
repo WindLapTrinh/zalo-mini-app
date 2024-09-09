@@ -1,0 +1,15 @@
+/* setting zalo  */
+
+.header {
+  display: none !important;
+}
+.box-custom-header {
+  position: relative;
+}
+.page-custom-header {
+  background-color: #ffa53d;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* end setting zalo  */

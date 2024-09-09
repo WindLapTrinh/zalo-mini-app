@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { BottomNavigation, Icon } from "zmp-ui";
 import { BsCart, BsHouse } from "react-icons/bs";
-import "../../css/detailhome/bottomNavigation.css";
-import { useCart } from "../../pages/shared/common/cart/CartContext";
+import "../../../css/detailhome/bottomNavigation.css";
+import { useCart } from "../common/cart/CartContext";
 
 const CustomBottomNavigation = () => {
   const navigate = useNavigate();

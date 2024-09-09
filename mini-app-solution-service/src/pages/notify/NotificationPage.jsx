@@ -2,7 +2,7 @@ import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Box, Text, Button } from "zmp-ui";
 import SetTitleHeader from "@/pages/shared/hooks/setTitleHeader";
-import CustomBottomNavigation from "@/components/layout/CustomBottomNavigation";
+import CustomBottomNavigation from "../shared/components/CustomBottomNavigation";
 
 import "../../css/notify/notifyPage.css";
 

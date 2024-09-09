@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Box, Tabs } from "zmp-ui";
-import CustomBottomNavigation from "@/components/layout/CustomBottomNavigation";
+import CustomBottomNavigation from "../shared/components/CustomBottomNavigation";
 import SetTitleHeader from "@/pages/shared/hooks/setTitleHeader";
 import UpdateCart from "@/pages/shared/pages/UpdateCart.jsx";
 import "../../css/cart/prurchaseHistory.css";

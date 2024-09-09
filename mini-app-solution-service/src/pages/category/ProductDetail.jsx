@@ -12,7 +12,7 @@ import {
 } from "zmp-ui";
 import ProductList from "../home/ProductList.jsx";
 import SliderCategory from "./SliderCategory.jsx";
-import CustomBottomNavigation from "../../components/layout/CustomBottomNavigation.jsx";
+import CustomBottomNavigation from "../shared/components/CustomBottomNavigation.jsx";
 import SheetCart from "../shared/common/cart/SheetCart"; 
 
 import { BsShop } from "react-icons/bs";

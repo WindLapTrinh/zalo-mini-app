@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   BottomNavigation,
@@ -17,9 +17,9 @@ import Slider from "@/pages/home/Slider";
 import ServiceStore from "@/pages/home/ServiceStore";
 import Introduce from "@/pages/home/Introduce";
 import HeaderListProduct from "@/pages/home/HeaderListProduct";
-
-import CustomBottomNavigation from "@/components/layout/CustomBottomNavigation";
+import CustomBottomNavigation from "@/pages/shared/components/CustomBottomNavigation";
 import SetTitleHeader from "@/pages/shared/hooks/setTitleHeader";
+import CustomHeader from "../shared/pages/CustomHeader";
 import Popup from "@/pages/shared/pages/Popup";
 
 const products = [
@@ -39,9 +39,6 @@ const gotoCategory = (id) => {
 };
 
 const Home = (props) => {
-  SetTitleHeader({
-    title: "Wind E-commerce",
-  });
   const navigate = useNavigate();
 
   const handleServiceStoreClick = (id) => {
@@ -54,30 +51,37 @@ const Home = (props) => {
 
   useEffect(() => {
     // Kiểm tra nếu popup đã được hiển thị trước đó
-    const popupShown = localStorage.getItem('popupShown');
+    const popupShown = localStorage.getItem("popupShown");
     if (!popupShown) {
       setShowPopup(true);
       // Đánh dấu popup đã được hiển thị
-      localStorage.setItem('popupShown', 'true');
+      localStorage.setItem("popupShown", "true");
     }
   }, []);
   const handleClosePopup = () => {
     setShowPopup(false);
-  }
+  };
   return (
     <Page className="home">
- <Popup show={showPopup} onClose={handleClosePopup} />
+      <Box className="box-custom-header">
+        <CustomHeader
+          title={"Wind Lập Trình"}
+          imageUrl={"./images/logo/logo-slk.jpg"}
+          subtitle={"Chào mừng, đến với Wind Lập Trình"}
+        />
+      </Box>
+      <Popup show={showPopup} onClose={handleClosePopup} />
       <Box className="header-home">
-        <Introduce/>
+        <Introduce />
         <ServiceStore
           products={products}
           onServiceStoreClick={handleServiceStoreClick}
         />
         <Slider />
-        <CategoryProduct/>
+        <CategoryProduct />
       </Box>
       <Box>
-      <HeaderListProduct />
+        <HeaderListProduct />
         <ProductList />
       </Box>
       <CustomBottomNavigation />
