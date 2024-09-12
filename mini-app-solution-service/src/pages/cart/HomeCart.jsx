@@ -7,15 +7,12 @@ import OrderProduct from "./OrderProduct";
 import CustomBottomNavigation from "../shared/components/CustomBottomNavigation";
 import InfomationVoucher from "./InfomationVoucher";
 import OrderCart from "../payment/OrderCart";
-
 import { useCart } from "../shared/common/cart/CartContext";
+import CustomHeader from "../shared/pages/CustomHeader";
 import "../../css/cart/homeCart.css";
 import "../../css/cart/shippingInformation.css";
 
 const HomeCart = () => {
-  SetTitleHeader({
-    title: "Giỏ hàng của bạn",
-  });
   const { cart, removeItemFromCart } = useCart();
   const [items, setItems] = useState(cart);
   useEffect(() => {
@@ -42,6 +39,8 @@ const HomeCart = () => {
 
 
   return (
+    <Box>
+      <CustomHeader title={"Giỏ hàng"}/>
     <Box className="cart-page" p={4}>
       {items.length != "" ? <Box>
         <Box className="sum-cart-page">
@@ -108,6 +107,7 @@ const HomeCart = () => {
         <OrderProduct items={items} />
         <CustomBottomNavigation />
       </Box> : <OrderCart/>}
+    </Box>
     </Box>
   );
 };

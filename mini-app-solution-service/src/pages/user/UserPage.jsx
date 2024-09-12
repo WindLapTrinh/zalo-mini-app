@@ -5,6 +5,7 @@ import SetTitleHeader from "@/pages/shared/hooks/setTitleHeader";
 import CustomBottomNavigation from "../shared/components/CustomBottomNavigation";
 import { openChatScreen } from '../../pages/shared/utils/openChatScreen';
 import useFollowOA from '../../pages/shared/hooks/useFollowOA';
+import CustomHeader from "../shared/pages/CustomHeader";
 
 import "../../css/user/userPage.css";
 
@@ -26,6 +27,8 @@ const UserPage = () => {
   };
 
   return (
+    <Box>
+      <CustomHeader title={"Nguyễn Thanh Phong"} imageAccount={"./images/user/user-wind.jpg"} levelAccount={"Thành viên vàng"}/>
     <Box className="user-page" p={4}>
       <Box className="form-section" mt={2} mb={2} onClick={handleFollowOA}>
         <Text className="form-title" size="medium" bold mb={2}>
@@ -66,6 +69,7 @@ const UserPage = () => {
         </List>
       </Box>
       <CustomBottomNavigation />
+    </Box>
     </Box>
   );
 };

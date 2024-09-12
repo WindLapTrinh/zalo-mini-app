@@ -2,8 +2,8 @@
 {
   "app": {
     "title": "Wind Shop",
-    "headerColor": "#ffa53d",
-    "textColor": "black",
+    "headerColor": "",
+    "textColor": "#ffffff",
     "statusBarColor": "#ffa53d",
     "leftButton": "none",
     "statusBar": "transparent",

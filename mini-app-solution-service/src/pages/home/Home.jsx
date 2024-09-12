@@ -19,8 +19,8 @@ import Introduce from "@/pages/home/Introduce";
 import HeaderListProduct from "@/pages/home/HeaderListProduct";
 import CustomBottomNavigation from "@/pages/shared/components/CustomBottomNavigation";
 import SetTitleHeader from "@/pages/shared/hooks/setTitleHeader";
-import CustomHeader from "../shared/pages/CustomHeader";
 import Popup from "@/pages/shared/pages/Popup";
+import CustomHeader from "../shared/pages/CustomHeader";
 
 const products = [
   { id: 1, name: "Điện thoại", image: "/images/category/iPhone.jpg" },
@@ -39,6 +39,9 @@ const gotoCategory = (id) => {
 };
 
 const Home = (props) => {
+  SetTitleHeader({
+    title: "Wind Lập Trình",
+  });
   const navigate = useNavigate();
 
   const handleServiceStoreClick = (id) => {
@@ -46,15 +49,12 @@ const Home = (props) => {
     navigate(`/categoryByProduct`);
   };
 
-  //popup
   const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
-    // Kiểm tra nếu popup đã được hiển thị trước đó
     const popupShown = localStorage.getItem("popupShown");
     if (!popupShown) {
       setShowPopup(true);
-      // Đánh dấu popup đã được hiển thị
       localStorage.setItem("popupShown", "true");
     }
   }, []);
@@ -64,32 +64,33 @@ const Home = (props) => {
   };
 
   return (
-    <Page className="home">
-      <Box className="box-custom-header">
-        <CustomHeader
-          title={"Wind Lập Trình"}
-          imageUrl={"./images/logo/logo-slk.jpg"}
-          subtitle={"Chào mừng, đến với Wind Lập Trình"}
-        />
-      </Box>
-      <Popup show={showPopup} onClose={handleClosePopup} />
-      <Box className="header-home">
-        <Introduce />
-        <ServiceStore
-          products={products}
-          onServiceStoreClick={handleServiceStoreClick}
-        />
-        <Slider />
-        <CategoryProduct />
-      </Box>
-      <Box>
-        <HeaderListProduct />
-        <ProductList />
-      </Box>
-      <CustomBottomNavigation />
-    </Page>
+    <Box>
+      <CustomHeader  title={"Wind Lập Trình"} subtitle={"Wecom, SLK Solutions"} imageUrl={"./images/logo/logo-slk.jpg"} />
+      <Page className="home">
+        <Box className="content">
+          <Popup show={showPopup} onClose={handleClosePopup} />
+          <Box className="header-home">
+            <Introduce />
+            <ServiceStore
+              products={products}
+              onServiceStoreClick={handleServiceStoreClick}
+            />
+            <Slider />
+            <CategoryProduct />
+          </Box>
+
+          {/* Product list and bottom navigation */}
+          <Box>
+            <HeaderListProduct />
+            <ProductList />
+          </Box>
+        </Box>
+
+        {/* Custom bottom navigation */}
+        <CustomBottomNavigation />
+      </Page>
+    </Box>
   );
 };
 
 export default Home;
-
