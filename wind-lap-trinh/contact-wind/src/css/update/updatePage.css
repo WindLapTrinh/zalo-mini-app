@@ -19,10 +19,10 @@
     color: #333;
   }
   .btn-home-update{
-    background-color: #ffa53d;
+    background-color: #028090;
     margin-top: 10px;
   }
   .btn-home-update:hover{
-    background-color: #ffa53d;
+    background-color: #028090;
     transition: 0.5s;
   }

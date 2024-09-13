@@ -4,7 +4,7 @@
 .title-list-address{
     font-size: 16px;
     font-weight: 500;
-    color: #ffa53d;
+    color: #028090;
     margin-bottom: 10px;
 }
 .item-list-address{
@@ -28,7 +28,7 @@
   }
 .header-list-address{
     font-weight: 500;
-    color: #ffa53d;
+    color: #028090;
     font-size: 14px;
 }
 .footer-list-address{
@@ -36,5 +36,5 @@
     font-size: 13px;
 }
 .zaui-checkbox-checked .zaui-checkbox-inner {
-  background-color: #ffa53d;
+  background-color: #028090;
 }

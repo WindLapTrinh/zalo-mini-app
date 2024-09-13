@@ -90,7 +90,7 @@
     font-size: 14px;
 }
 .btn-apply-voucher:hover{
-    background-color: #ffa53d;
+    background-color: #028090;
     color: white;
     transition: 0.5s;
 }
@@ -127,7 +127,7 @@
   margin-top: 2px;
 }
 .btn-submit-voucher{
-    background-color: #ffa53d;
+    background-color: #028090;
     color: white;
     font-weight: 500;
 }

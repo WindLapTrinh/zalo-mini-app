@@ -3,7 +3,7 @@ body {
   padding-top: calc(var(--zaui-safe-area-inset-top, 0px) + 44px);
 }
 .page-custom-header {
-  background-color: #028090;
+  background-color: #028090 !important;
   color: white;
 }
 .custom-header-account {

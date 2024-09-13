@@ -18,7 +18,6 @@ import ServiceStore from "@/pages/home/ServiceStore";
 import Introduce from "@/pages/home/Introduce";
 import HeaderListProduct from "@/pages/home/HeaderListProduct";
 import CustomBottomNavigation from "@/pages/shared/components/CustomBottomNavigation";
-import SetTitleHeader from "@/pages/shared/hooks/setTitleHeader";
 import Popup from "@/pages/shared/pages/Popup";
 import CustomHeader from "../shared/pages/CustomHeader";
 
@@ -26,9 +25,10 @@ const products = [
   { id: 1, name: "Technolory AI", image: "/images/category/icon-ai.png" },
   { id: 2, name: "Mini App", image: "/images/category/icon-mini-app.png" },
   { id: 3, name: "Desgin Web", image: "/images/category/icon-website.png" },
-  { id: 4, name: "Đồng hồ", image: "/images/category/dong-ho.jpg" },
-  { id: 5, name: "Tai nghe", image: "/images/category/tai-ghe.jpg" },
-  { id: 6, name: "Máy in", image: "/images/category/may-in.jpg" },
+  { id: 4, name: "Technolory AI", image: "/images/category/icon-ai.png" },
+  { id: 5, name: "Mini App", image: "/images/category/icon-mini-app.png" },
+  { id: 6, name: "Desgin Web", image: "/images/category/icon-website.png" },
+
 ];
 
 const gotoCategory = (id) => {
@@ -59,7 +59,7 @@ const Home = (props) => {
 
   return (
     <Box>
-      <CustomHeader  title={"Wind Lập Trình"} subtitle={"Đội ngũ lập trình GenZ"} imageUrl={"./images/logo/wind-app.png"} />
+      <CustomHeader title={"Wind Lập Trình"} subtitle={"Đội ngũ lập trình GenZ"} imageUrl={"./images/logo/wind-app.png"} />
       <Page className="home">
         <Box className="content">
           <Popup show={showPopup} onClose={handleClosePopup} />

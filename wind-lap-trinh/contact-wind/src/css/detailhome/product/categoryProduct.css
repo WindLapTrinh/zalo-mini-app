@@ -41,10 +41,10 @@
     background: #555;
   }
 .zaui-tabs-tabbar-item.zaui-tabs-tabbar-item-active{
-    color: #ffa53d !important;
+    color: #028090 !important;
 }
 .zaui-tabs-tabbar-active-line{
-    background-color: #ffa53d !important;
+    background-color: #028090 !important;
 }
 .tabs-wrapper{
   white-space: unset !important;

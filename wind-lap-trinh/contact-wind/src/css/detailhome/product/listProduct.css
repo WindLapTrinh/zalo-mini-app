@@ -23,12 +23,12 @@
 }
 .price-item{
     float: left;
-    color: #ffa53d;
+    color: #028090;
   }
  .product-icon{
     float: right;
     line-height: unset;
-    color: #ffa53d;
+    color: #028090;
     font-size: 20px;
  }
  .descript-product{
@@ -48,7 +48,7 @@
 
 .all-product{
     font-weight: 500;
-    color: #ffa53d;
+    color: #028090;
     font-size: 14px;
 }
 .sheet-header-product{
@@ -67,7 +67,7 @@
     font-weight: 500;
  }
  .sheet-price-product{
-    color: #ffa53d;
+    color: #028090;
     font-weight: 500;
  }
  .sheet-footer-product{
@@ -77,7 +77,7 @@
     border-radius: 8px;
  }
  .btn-sheet-product{
-    background-color: #ffa53d !important;
+    background-color: #028090 !important;
     padding: 0px !important;
     min-width: 40px !important;
     height: 40px !important;
@@ -85,7 +85,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
  }
  .btn-sheet-increased{
-    background-color: #ffa53d !important;
+    background-color: #028090 !important;
     padding: 0px !important;
     min-width: 40px !important;
     height: 40px !important;
@@ -93,12 +93,12 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 .btn-sheet-payment{
-    background-color: #ffa53d !important;
+    background-color: #028090 !important;
     font-weight: 500;
 }
 .btn-sheet-cart{
     background-color: #ffffff !important;
-    color: #ffa53d;
+    color: #028090;
     font-weight: 500;
     border: 1px solid;
 }
