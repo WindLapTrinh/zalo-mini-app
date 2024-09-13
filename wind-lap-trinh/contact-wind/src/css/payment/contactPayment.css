@@ -1,0 +1,24 @@
+.title-contact-payment{
+    text-align: center;
+    font-size: 14px;
+}
+.contact-shop{
+    border: 1px solid #696f6a;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin: 12px 80px;
+}
+.image-zalo-pay{
+    width: 27px;
+    height: 29px;
+    padding: 2px 0px;
+    margin-right: 5px;
+}
+.content-shop{
+    font-size: 13px;
+    margin-top: 4px;
+    color: #696f6a;
+    font-weight:500;
+}

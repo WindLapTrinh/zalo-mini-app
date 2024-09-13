@@ -1,10 +1,10 @@
 
 {
   "app": {
-    "title": "Wind Shop",
+    "title": "Wind Lập Trình",
     "headerColor": "",
-    "textColor": "#ffffff",
-    "statusBarColor": "#ffa53d",
+    "textColor": "#005B96",
+    "statusBarColor": "#028090",
     "leftButton": "none",
     "statusBar": "normal",
     "selfControlLoading": false,
@@ -17,7 +17,7 @@
   "listSyncJS": [],
   "listAsyncJS": [],
   "template": {
-    "primaryColor": "#006af5",
+    "primaryColor": "#028090",
     "prefixCurrencySymbol": false,
     "currencySymbol": "đ",
     "headerLogo": ""

@@ -1,0 +1,27 @@
+.header-address-payment{
+  margin-bottom: 10px;
+  position: relative;
+  display: flex;
+  align-items: center; 
+  gap: 10px;
+
+}
+
+.info-address{
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.icon-address-payment{
+    font-size: 18px;
+    color: #696f6a;
+}
+.title-address-payment{
+    color: #696f6a;
+    font-weight: 500;
+}
+.detail-address-payment{
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #333;
+}

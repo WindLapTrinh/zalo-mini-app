@@ -1,0 +1,28 @@
+/* user page  */
+body {
+  padding-top: calc(var(--zaui-safe-area-inset-top, 0px) + 44px);
+}
+.page-custom-header {
+  background-color: #028090;
+  color: white;
+}
+.custom-header-account {
+  height: calc(var(--zaui-safe-area-inset-top, 0px) + 56px); /* Thay 56px bằng giá trị chiều cao mong muốn */
+  margin-bottom: 0;
+  flex: none;
+}
+.image-account{
+  width: 50px;
+    border-radius: 30px;
+}
+/* end user page */
+
+/* home  */
+.check-wind{
+  color: #028090;
+}
+.img-ai{
+  width: 50px;
+  border-radius: 50px;
+}
+/* end home  */
