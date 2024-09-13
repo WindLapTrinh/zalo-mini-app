@@ -23,15 +23,13 @@ import Popup from "@/pages/shared/pages/Popup";
 import CustomHeader from "../shared/pages/CustomHeader";
 
 const products = [
-  { id: 1, name: "Điện thoại", image: "/images/category/iPhone.jpg" },
-  { id: 2, name: "Laptop", image: "/images/category/laptop.jpg" },
-  { id: 3, name: "Tablet", image: "/images/category/tablet.jpg" },
-  { id: 4, name: "Đồng hồ", image: "/images/category/dong-ho.jpg" },
-  { id: 5, name: "Tai nghe", image: "/images/category/tai-ghe.jpg" },
-  { id: 6, name: "Máy in", image: "/images/category/may-in.jpg" },
-  { id: 7, name: "Màn PC", image: "/images/category/may-tinh.jpg" },
-  { id: 8, name: "Phụ kiện", image: "/images/category/phu-kien.jpg" },
-  { id: 9, name: "Camera", image: "/images/category/camera.jpg" },
+  { id: 1, name: "Bé sơ sinh", image: "/images/category/parent-baby.png" },
+  { id: 2, name: "Chăm.s Bà bầu", image: "/images/category/pregnancy-care.png" },
+  { id: 3, name: "Mẹ sau sinh", image: "/images/category/postpartum-mother.png" },
+  { id: 4, name: "Massage", image: "/images/category/massage.png" },
+  { id: 5, name: "Bảo mẫu", image: "/images/category/nanny.png" },
+  { id: 6, name: "Làm đẹp", image: "/images/category/postpartum-beauty.png" },
+  { id: 7, name: "Tắc sữa", image: "/images/category/clogged-milk.png" },
 ];
 
 const gotoCategory = (id) => {
@@ -39,9 +37,6 @@ const gotoCategory = (id) => {
 };
 
 const Home = (props) => {
-  SetTitleHeader({
-    title: "Wind Lập Trình",
-  });
   const navigate = useNavigate();
 
   const handleServiceStoreClick = (id) => {
@@ -65,7 +60,7 @@ const Home = (props) => {
 
   return (
     <Box>
-      <CustomHeader  title={"Wind Lập Trình"} subtitle={"Wecom, SLK Solutions"} imageUrl={"./images/logo/logo-slk.jpg"} />
+      <CustomHeader  title={"Miss Care"} subtitle={"Wellcom, SLK Solutions"} imageUrl={"./images/logo/logo-slk.jpg"} />
       <Page className="home">
         <Box className="content">
           <Popup show={showPopup} onClose={handleClosePopup} />

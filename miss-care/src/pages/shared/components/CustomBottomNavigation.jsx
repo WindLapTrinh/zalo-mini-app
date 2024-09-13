@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { BottomNavigation, Icon } from "zmp-ui";
 import { BsCart, BsHouse } from "react-icons/bs";
+import { TbBrandBooking } from "react-icons/tb";
 import "../../../css/detailhome/bottomNavigation.css";
 import { useCart } from "../common/cart/CartContext";
 
@@ -75,22 +76,22 @@ const CustomBottomNavigation = () => {
         onClick={() => handleNotify("contact")}
       />
       <BottomNavigation.Item
-        className={activeTab === "cart" ? "icon-active" : ""}
-        key="cart"
-        label="Giỏ hàng"
+        className={activeTab === "booking" ? "icon-active" : ""}
+        key="booking"
+        label="Booking"
         icon={
           <div className="accounting-icon-wrapper">
-            <BsCart />
+            <TbBrandBooking />
             {getCartCount() > 0 && <div className="red-circle">{getCartCount()}</div>}
           </div>
         }
         activeIcon={
           <div className="accounting-icon-wrapper">
-            <BsCart />
+            <TbBrandBooking />
             {getCartCount() > 0 && <div className="red-circle">{getCartCount()}</div>}
           </div>
         }
-        onClick={() => handleCart("cart")}
+        onClick={() => handleCart("booking")}
       />
       <BottomNavigation.Item
         className={activeTab === "user" ? "icon-active" : ""}

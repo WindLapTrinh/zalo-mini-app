@@ -1,30 +1,30 @@
 import React, { useState, useEffect } from "react";
 import { Box, Text } from "zmp-ui";
-import { IoCartSharp } from "react-icons/io5";
+import { BsShop } from "react-icons/bs";
 import "../../css/detailhome/swiper/swiper-bundle.min.css";
 const categories = [
   {
     id: 1,
-    name: "iPhone 13 ProMax",
-    image: "/images/product/iphone-13.jpg",
+    name: "Bảo mẫu cuối tuần",
+    image: "/images/product/bao-mau-cuoi-tuan.png",
     price: "13.990.000",
   },
   {
     id: 2,
-    name: "iPhone 15 Pro Max 256 GB",
-    image: "/images/product/iphone_15_pro_max.png",
+    name: "Chăm sóc người già",
+    image: "/images/product/cham-soc-nguoi-gia.jpg",
     price: "29.490.000",
   },
   {
     id: 3,
-    name: "iPhone 11 128 GB",
-    image: "/images/product/iphone_11.jpg",
+    name: "Bảo mẫu 5 sao",
+    image: "/images/product/bao-mau-5-sao.png",
     price: "10.190.000",
   },
   {
     id: 4,
-    name: "iPhone 14 Pluslus 512 GB",
-    image: "/images/product/iphone_14_pluspng.png",
+    name: "Giảm eo sau sinh",
+    image: "/images/product/dich-vu-giam-eo-sau-sinh.png",
     price: "24.990.000",
   },
 ];
@@ -60,16 +60,11 @@ const CategoryProduct = () => {
       <Box className="header-slider-category mb-4">
         <div className="infomation-sale">
           <div className="icon-product-today">
-            <IoCartSharp />
+            <BsShop/>
           </div>
           <Text.Title size="small" className="title-product">
-            Mega Sale 50%
+            Dịch vụ tại nhà
           </Text.Title>
-        </div>
-        <div className="countdown-timer">
-          <div>{String(hours).padStart(2, "0")}</div>
-          <div>{String(minutes).padStart(2, "0")}</div>
-          <div>{String(secs).padStart(2, "0")}</div>
         </div>
       </Box>
       <Box mt={2} className="category-product">

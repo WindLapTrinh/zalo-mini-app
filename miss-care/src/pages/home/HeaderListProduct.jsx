@@ -8,14 +8,14 @@ const HeaderListProduct = () => {
     <div className="header-container">
       <div className="header-list-product">
         <div className="icon-list-product">
-          <FaHotjar />
+          <img className="img-service-home" src="./images/category/service.png" alt="" />
         </div>
         <div className="title-list-product">
-          <Text>Sản phẩm hot</Text>
+          <Text>Tất cả dịch vụ</Text>
         </div>
       </div>
       <div className="input-search-product">
-        <Input.Search placeholder="tìm kiếm sản phẩm..." size="small" />
+        <Input.Search placeholder="tìm kiếm dịch vụ..." size="small" />
       </div>
     </div>
   );

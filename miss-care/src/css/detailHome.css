@@ -1,5 +1,5 @@
 .header-home{
-  background: linear-gradient(to bottom, rgb(255 165 61), rgb(254 186 85));
+  background: linear-gradient(to bottom, rgb(255 200 0), rgb(255, 215, 0));
   border-bottom: 1px solid #c6c5c5;
 } 
 
@@ -29,5 +29,8 @@
 .icon-active{
   color: #ffa53d !important;
 }
-
+.img-service-home{
+  width: 50px;
+  height: 34px;
+}
 /* slider */

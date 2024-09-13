@@ -10,9 +10,6 @@ import CustomHeader from "../shared/pages/CustomHeader";
 import "../../css/user/userPage.css";
 
 const UserPage = () => {
-  SetTitleHeader({
-    title: "Cá nhân"
-  });
 
   const navigate = useNavigate();
   const oaId = "9905154963002439"; 

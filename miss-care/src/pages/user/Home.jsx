@@ -5,9 +5,6 @@ import SetTitleHeader from "../shared/hooks/setTitleHeader";
 import CustomHeader from "../shared/pages/CustomHeader";
 
 const Home = () => {
-    SetTitleHeader({
-        title: "Nguyễn Thanh Phong"
-    })
     return(
         <Box>
         <CustomHeader title={"Cá nhân"}/>

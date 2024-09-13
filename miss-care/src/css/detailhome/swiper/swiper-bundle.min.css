@@ -2,7 +2,7 @@
   padding: 0px 10px 5px 10px;
 } */
 .category-product {
-    background: rgb(254 186 85);
+    background: rgb(255, 215, 0);
     color: #333;
     border-radius: 5px;
     height: 86px;
@@ -42,6 +42,7 @@
   }
   .custom-border-image{
     width: 114px;
+    height: 91px;
   }
    .name-product-today{
     display: block;
@@ -63,7 +64,7 @@
   .icon-product-today{
     float: left;
     margin-right: 5px;
-    color: #ffffff;
+    color: #019c2a;
     font-weight: 500;
     font-size: 20px;
     padding-left: 10px;
@@ -89,7 +90,7 @@
   
   .title-product {
     font-size: 14px; 
-    color:#ffffff;
+    color:black;
     font-weight: 500;
   }
   
@@ -99,7 +100,7 @@
     gap: 8px; 
   }
   
-  .countdown-timer div {
+  /* .countdown-timer div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -112,4 +113,4 @@
     font-weight: bold;
     color: #857272;
   }
-  
+   */

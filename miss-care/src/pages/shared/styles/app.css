@@ -3,13 +3,16 @@ body {
   padding-top: calc(var(--zaui-safe-area-inset-top, 0px) + 44px);
 }
 .page-custom-header {
-  background-color: #ffa53d;
-  color: white;
+  background-color: #FFC800;
+  color: black;
 }
 .custom-header-account {
   height: calc(var(--zaui-safe-area-inset-top, 0px) + 56px); /* Thay 56px bằng giá trị chiều cao mong muốn */
   margin-bottom: 0;
   flex: none;
+}
+.title-header{
+  font-size: 16px;
 }
 .image-account{
   width: 50px;

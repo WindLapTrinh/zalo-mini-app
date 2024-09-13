@@ -5,11 +5,11 @@ import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 import "../../css/detailhome/slider.css";
 
-import bannerOne from "/images/banner/banner-1.png";
-import bannerTwo from "/images/banner/banner-2.png";
-import banner3 from "/images/banner/banner-3.png";
-import banner4 from "/images/banner/banner-4.png";
-import banner5 from "/images/banner/banner-5.png";
+import bannerOne from "/images/banner/anh-1.jpg";
+import bannerTwo from "/images/banner/anh-2.jpg";
+import banner3 from "/images/banner/anh-3.jpg";
+import banner4 from "/images/banner/anh-4.jpg";
+import banner5 from "/images/banner/anh-5.jpg";
 
 SwiperCore.use([EffectCoverflow, Pagination]);
 

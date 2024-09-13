@@ -16,12 +16,11 @@
   .fouder span, .free-ship span {
     margin-left: 8px; /* Khoảng cách giữa icon và text */
     font-size: 11px;
-    color: #ffffff;
+    color: black;
   }
   
   .fouder svg, .free-ship svg {
     font-size: 14px; /* Kích thước icon */
-    color: #333; /* Màu icon, có thể thay đổi tùy ý */
-    color: #ffffff;
+    color: #019c2a;
   }
   

@@ -34,7 +34,7 @@ const CustomHeader = ({
 
             {title && (
               <Box>
-                <Text.Title size="small">{title}</Text.Title>
+                <Text.Title size="small" className="title-header">{title}</Text.Title>
 
                 {subtitle && <Text size="xxSmall">{subtitle}</Text>}
                 {levelAccount && 

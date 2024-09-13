@@ -14,9 +14,9 @@ const ShippingInfo = () => {
   return (
     <Box className="detail-shipping">
       <Box className="header-cart-product">
-        <img className="icon-header-cart" src="/images/icon/oto-cart.jpg" />
+        <img className="icon-header-cart" src="/images/category/address.png" />
         <Text className="section-title" size="large" bold mb={3}>
-          Thông tin vận chuyển
+          Địa chỉ của bạn
         </Text>
       </Box>
       <Box className="shipping-info" mt={2}>
@@ -56,7 +56,7 @@ const ShippingInfo = () => {
                   Ngày 25 Th07 - Ngày 26 Th07
                 </div>
                 <div className="item-description">
-                  Thời gian dự kiến giao hàng
+                  Thời gian dự kiến nhân viên tới
                 </div>
               </div>
             </div>

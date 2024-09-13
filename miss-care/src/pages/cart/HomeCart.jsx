@@ -40,15 +40,15 @@ const HomeCart = () => {
 
   return (
     <Box>
-      <CustomHeader title={"Giỏ hàng"}/>
+      <CustomHeader title={"Booking"}/>
     <Box className="cart-page" p={4}>
       {items.length != "" ? <Box>
         <Box className="sum-cart-page">
           <Box className="cart-items">
             <Box className="header-cart-product">
-              <img className="icon-header-cart" src="/images/icon/cart.jpg" />
+              <img className="icon-header-cart" src="/images/icon/mom-baby.png" />
               <Text className="section-title" size="large" bold mb={3}>
-                Sản phẩm đặt mua
+                Dịch vụ của bạn
               </Text>
             </Box>
 
