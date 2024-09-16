@@ -9,9 +9,12 @@
     height: 100%;
     overflow-x: scroll;
     white-space: nowrap;
-    padding: 10px 0px 10px 10px;
+    padding: 0px 0px 10px 10px;
+    margin-top: 5px;
   }
-  
+  .img-basletball{
+    width: 32px;
+  }
   .category-product {
     width: 100%;
     overflow-x: scroll;
@@ -34,20 +37,26 @@
   .category-item{
     margin-right: 10px;
     border-radius: 5px;
-    padding: 6px;
     width: 132px;
     height: auto;
   }
   .custom-border-image{
     max-width: unset;
-    width: 115px;
+    width: 133px;
     border-radius: 8px;
-    height: 109px;
+    height: 136px;
   }
    .name-product-today{
     display: block;
     color: #1e2121;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 11px;
+  }
+  .description-product-today{
+    white-space: normal; 
+    word-wrap: break-word; 
+    font-size: 11px;
+    color: #a8a8a8;
   }
   .content-product-today{
     color: #028090;
@@ -60,7 +69,8 @@
 }
 
 .name-product-today, 
-.price-product-today {
+.price-product-today,
+.description-product-today {
   margin: 4px 0;
 }
   .icon-product-today{
@@ -68,8 +78,8 @@
     margin-right: 5px;
     color: #1e2121;
     font-weight: 500;
-    font-size: 20px;
-    padding-left: 10px;
+    font-size: 26px;
+    padding-left: 5px;
   }
 
   /* flas sale  */
@@ -92,9 +102,16 @@
   }
   
   .title-product {
-    font-size: 14px; 
+    font-size: 20px; 
     color:#1e2121;
     font-weight: 500;
+  }
+  .note-product{
+    font-size: 18px;
+    color: #736d6d;
+    font-weight: 400;
+    margin-bottom: 8px; 
+    padding: 0px 10px;
   }
   
   .countdown-timer {

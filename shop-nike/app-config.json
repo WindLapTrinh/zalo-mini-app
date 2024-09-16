@@ -1,16 +1,16 @@
-
 {
   "app": {
     "title": "Wind Lập Trình",
     "headerColor": "",
     "textColor": "#005B96",
-    "statusBarColor": "#1e2121",
+    "statusBarColor": "#000000",
     "leftButton": "none",
     "statusBar": "normal",
     "selfControlLoading": false,
     "hideAndroidBottomNavigationBar": false,
     "hideIOSSafeAreaBottom": false,
-    "actionBarHidden": true
+    "actionBarHidden": true,
+    "textAlign": "left"
   },
   "debug": false,
   "listCSS": [],

@@ -1,0 +1,28 @@
+/* ThankPage styles */
+.thank-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  min-height: auto;
+  margin-bottom: 40px;
+}
+
+.thank-content {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.thank-logo {
+  display: flex;
+  margin: 0 auto;
+  width: 66px;
+  border-radius: 8px;
+}
+
+.thank-title {
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+}
