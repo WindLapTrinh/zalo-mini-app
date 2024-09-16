@@ -1,0 +1,76 @@
+.page-payment {
+  background-color: #fff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.header-product-payment {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+.title-product-payment {
+  color: #696f6a;
+  font-weight: 500;
+}
+.detail-shipping-payment {
+  padding-left: 10px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #333;
+}
+.icon-payment {
+  color: #696f6a;
+  font-size: 18px;
+}
+ /* map item product  */
+ .index-product-payment{
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box-shadow */
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.product-payment-item{
+  display: flex;
+  align-items: flex-start;
+  flex: 1;
+}
+.product-payment-image{
+  flex-shrink: 0;
+  width: 74px;
+  height: 74px;
+  margin-right: 16px;
+}
+.product-payment-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.product-payment-info{
+  flex: 1;
+}
+.product-payment-name{
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.total-item-payment{
+  font-size: 12px;
+  color: #696f6a;
+  font-weight: bold;
+  position: absolute;
+  bottom: 12px; 
+  right: 12px; 
+}
+.quantity-product-item{
+  color: #696f6a;
+  font-weight: 500;
+  font-size: 16px;
+}

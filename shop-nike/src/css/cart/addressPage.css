@@ -1,0 +1,51 @@
+.address-page {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    color: #333;
+  }
+  
+  .input-field {
+    margin-bottom: 10px;
+  }
+  
+  .contact-info,
+  .address-info {
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .default-address {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .default-checkbox {
+    margin-right: 10px;
+  }
+  
+  .default-text {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .save-button {
+    background-color: #028090;
+    margin: 0 auto;
+    display: flex;
+  }
+  .save-button:hover{
+    background-color: #028090;
+  }
+  .icon-address{
+    margin-right: 10px;
+  }
+  .zaui-sheet-content{
+    height: 400px;
+    text-align: center;
+  }

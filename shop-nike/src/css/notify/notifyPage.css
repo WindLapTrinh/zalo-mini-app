@@ -1,0 +1,53 @@
+body{
+  background: #ffffff;
+}
+.notification-page {
+    padding: 16px;
+    background-color: #ffffff;
+  }
+  
+  .page-title {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  .notification-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .notification-item {
+    background-color: #d26d0f;
+    color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .notification-title {
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .notification-message {
+    margin-bottom: 8px;
+    color: #ffffff;
+
+  }
+  
+  .notification-date {
+    margin-bottom: 8px;
+    color: #ffffff;
+
+  }
+  
+  .view-details-button {
+    width: 100%;
+    background-color: #ffffff;
+    color: #ffffff;
+  }
+  .view-details-button:hover{
+    background-color: #ffffff;
+    transition: 0.5s;
+  }
+  

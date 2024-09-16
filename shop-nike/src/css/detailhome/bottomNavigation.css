@@ -1,0 +1,25 @@
+.zaui-bottom-navigation-fixed{
+    z-index: 1000 !important;
+}
+.zaui-bottom-navigation-content{
+        padding-bottom: 8px;
+     height:calc(var(--zaui-safe-area-inset-bottom) + 50px);
+}
+.zaui-bottom-navigation-content::after{
+    background-color: unset;
+}
+.accounting-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+.red-circle{
+    position: absolute;
+    top: -7px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0px 7px;
+    font-size: 12px;
+}

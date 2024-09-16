@@ -1,0 +1,28 @@
+.update-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .update-content {
+    text-align: center;
+  }
+  
+  .update-image {
+    width: 340px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .update-message {
+    color: #333;
+  }
+  .btn-home-update{
+    background-color: #028090;
+    margin-top: 10px;
+  }
+  .btn-home-update:hover{
+    background-color: #028090;
+    transition: 0.5s;
+  }

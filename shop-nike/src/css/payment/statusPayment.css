@@ -1,0 +1,20 @@
+.page-status{
+    text-align: center;
+    font-weight: 500;
+    color: #646060;
+}
+.status-payment:hover{
+    color: white;
+    background: #a7a3a3;
+    padding: 2px;
+    margin: 0px 112px;
+    border: 1px solid;
+    border-radius: 16px;
+    transition: 0.5s;
+}
+
+.zaui-modal-content-title{
+    color: #028090;
+    font-weight: 500;
+}
+

@@ -1,0 +1,36 @@
+
+
+  .info-section, .steps-section, .form-section {
+    margin-bottom: 20px;
+    margin-bottom: 20px;
+    background: #028090;
+    padding: 10px 20px 20px 10px;
+        border-radius: 10px;
+    color: #ffffff;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Initial box-shadow */
+  }
+  
+  .info-title, .steps-title, .form-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  .descript-user{
+    font-size: 12px;
+  
+  }
+  .history-cart{
+    margin-bottom: 20px;
+    background: #ffffff;
+    padding: 10px 20px 0px 10px;
+        color: black;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Initial box-shadow */
+  }
+  .list-history{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  

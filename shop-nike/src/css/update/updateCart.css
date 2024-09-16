@@ -1,0 +1,32 @@
+.update-cart-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .update-cart-content {
+    text-align: center;
+  }
+  
+  .update-cart-image {
+    width: 340px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .update-cart-message {
+    color: #333;
+  }
+  .description-cart-message{
+    font-size: 13px;
+    color: #878686;
+  }
+  .btn-home-cart-update{
+    background-color: #028090;
+    margin-top: 10px;
+  }
+  .btn-home-update:hover{
+    background-color: #333;
+    transition: 0.5s;
+  }
