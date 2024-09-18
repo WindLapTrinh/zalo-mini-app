@@ -17,7 +17,7 @@ import {
 const items = [
   {
     id: 1,
-    image: "./images/product/product-1.jpeg",
+    image: "./images/product/customer-1.jpg",
     note: "Product Care",
     title: "3 ways to clean Ari Force 1s",
   },

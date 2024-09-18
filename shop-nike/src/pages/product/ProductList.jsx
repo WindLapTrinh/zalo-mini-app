@@ -1,72 +1,74 @@
 import React from "react";
 import { Box, Text } from "zmp-ui";
 import ProductItem from "./ProductItem";
+import { MdFavoriteBorder } from "react-icons/md";
+
 import "../../css/product/listProduct.css";
 
 const sampleProducts = [
   {
     id: 1,
-    name: "iPhone 15 Pro Max Titan Trắng",
-    image: "/images/product/iphone-15-promax-trang-1.jpg",
-    category: "iPhone 15 Pro Max",
-    price: 29490000,
-    icon: "zi-plus-circle-solid",
+    name: "Nike Dunk Low Retro",
+    image: "/images/product/product-16.jpg",
+    category: "Nike Dunk Low",
+    price: 2929000,
+    icon: <MdFavoriteBorder/>,
   },
   {
     id: 2,
-    name: "iPhone 15 Pro Max Titan Xanh",
-    image: "/images/product/iphone-15-promax-xanh-1.jpg",
-    category: "iPhone 15 Pro Max",
-    price: 29490000,
-    icon: "zi-plus-circle-solid",
+    name: "Nike Dunk Low Retro",
+    image: "/images/product/product-17.jpg",
+    category: "Nike Dunk Low",
+    price: 3519000,
+    icon: <MdFavoriteBorder/>,
   },
   {
     id: 3,
-    name: "iPhone 15 Pro Max Titan Đen",
-    image: "/images/product/iphone-15-promax-den-1.jpg",
-    category: "iPhone 15 Pro Max",
+    name: "Nike Air Force 1'07 WB",
+    image: "/images/product/product-18.jpg",
+    category: "Nike Air Force",
     price: 29490000,
-    icon: "zi-plus-circle-solid",
+    icon: <MdFavoriteBorder/>,
   },
   {
     id: 4,
-    name: "iPhone 15 Pro Max Titan Tự Nhiên",
-    image: "/images/product/iphone-15-promax-xanh-vang-1.jpg",
-    category: "iPhone 15 Pro Max",
+    name: "Nike Ari Force 1'07 LV8",
+    image: "/images/product/product-19.jpg",
+    category: "Nike Air Force",
     price: 29490000,
-    icon: "zi-plus-circle-solid",
+    icon: <MdFavoriteBorder/>,
   },
   {
     id: 5,
-    name: "Macbook Air M3 Màu Xám",
-    image: "/images/product/macbook-air-m3-13-2024-xam-1.jpg",
-    category: "MacBook Ari M3 13 2024",
-    price: 26990000,
-    icon: "zi-plus-circle-solid",
+    name: "Nike Dunk Low",
+    image: "/images/product/product-14.jpg",
+    category: "Nike Dunk Low",
+    price: 2929000,
+    icon: <MdFavoriteBorder/>,
   },
   {
     id: 6,
-    name: "Macbook Air M3 Màu Bạc Trắng",
-    image: "/images/product/macbook-air-m3-13-2024-bac-1.jpg",
-    category: "MacBook Ari M3 13 2024",
-    price: 26990000,
-    icon: "zi-plus-circle-solid",
+    name: "Nike Dunk Low",
+    image: "/images/product/product-15.jpg",
+    category: "Nike Dunk Low",
+    price: 3159000,
+    icon: <MdFavoriteBorder/>,
   },
   {
     id: 7,
-    name: "Macbook Air M3 Màu Xanh",
-    image: "/images/product/macbook-air-m3-13-2024-xanh-1.jpg",
-    category: "MacBook Ari M3 13 2024",
-    price: 26990000,
-    icon: "zi-plus-circle-solid",
+    name: "Nike Ari Max 2013",
+    image: "/images/product/product-20.jpg",
+    category: "Nike Ari Max",
+    price: 5279000,
+    icon: <MdFavoriteBorder/>,
   },
   {
     id: 8,
     name: "Macbook Air M3 Màu Vàng",
-    image: "/images/product/macbook-air-m3-13-2024-vang-1.jpg",
-    category: "MacBook Ari M3 13 2024",
-    price: 26990000,
-    icon: "zi-plus-circle-solid",
+    image: "/images/product/product-21.jpg",
+    category: "Nike Ari Max",
+    price: 4409000,
+    icon: <MdFavoriteBorder/>,
   },
 ];
 
@@ -84,21 +86,6 @@ const ProductList = () => {
     <Box className="list-product">
       {Object.entries(groupedProducts).map(([category, products]) => (
         <Box key={category} mt={4}>
-          <Box
-            className="title-category"
-            flex
-            flexDirection="row"
-            justifyContent="space-between"
-            alignItems="center"
-            mb={2}
-          >
-            <Text fontWeight="bold" className="title-category-product" fontSize="lg">
-              {category}
-            </Text>
-            <Text className="all-product" fontSize="sm" color="blue" cursor="pointer">
-              Tất cả
-            </Text>
-          </Box>
           <Box className="grid grid-cols-2 gap-4">
             {products.map((product) => (
               <ProductItem key={product.id} product={product} />

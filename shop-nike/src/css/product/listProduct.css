@@ -9,14 +9,12 @@
 }
 .list-product{
     margin-bottom: 50px !important;
-    padding:10px;
     background: #ffffff;
 } 
 .product-index{
     padding: 10px;
     transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box-shadow */
-    border-radius: 10px;
 } 
 .product-name-item{
    margin-top: 5px;
@@ -28,7 +26,6 @@
  .product-icon{
     float: right;
     line-height: unset;
-    color: #028090;
     font-size: 20px;
  }
  .descript-product{

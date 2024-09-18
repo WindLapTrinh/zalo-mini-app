@@ -68,11 +68,6 @@
   text-align: left;
 }
 
-.name-product-today, 
-.price-product-today,
-.description-product-today {
-  margin: 4px 0;
-}
   .icon-product-today{
     float: left;
     margin-right: 5px;

@@ -40,7 +40,9 @@ const ProductItem = ({ product }) => {
       <Text size="xxSmall" className="text-gray pb-2">
         <span className="product-price">{product.price.toLocaleString("vi-VN")} đ</span>
         <span onClick={handleSetActiveSheet}>
-          <Icon className="product-icon" icon={product.icon} />
+          <Box className="product-icon">
+            {product.icon}
+          </Box>
         </span>
       </Text>
       <SheetCart

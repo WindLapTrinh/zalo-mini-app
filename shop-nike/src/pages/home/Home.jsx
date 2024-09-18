@@ -19,7 +19,6 @@ import ThankPage from "./ThankPage";
 import CustomBottomNavigation from "@/pages/shared/components/CustomBottomNavigation";
 import CustomHeader from "../shared/pages/CustomHeader";
 
-import "../../css/detailHome.css";
 const Home = (props) => {
   const navigate = useNavigate();
 

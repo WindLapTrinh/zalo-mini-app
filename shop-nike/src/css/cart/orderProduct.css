@@ -18,10 +18,13 @@
   .order-product-cart{
     background-color: #fff;
     padding: 12px;
-    margin-bottom: 85px  !important;
+    padding-bottom: 85px  !important;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .text-sum-cart{
+    color: #cb0000;
   }
   
   .payment-summary {
@@ -30,10 +33,10 @@
   }
   
   .btn-payment {
-   background: #028090 !important;
+   background: black !important;
   }
   .calculate-total{
     font-weight: 500;
-    color: #028090;
+    color: black;
   }
   

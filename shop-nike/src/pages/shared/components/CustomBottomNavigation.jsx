@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { BottomNavigation, Icon } from "zmp-ui";
-import { BsCart, BsHouse } from "react-icons/bs";
-import { BsBootstrap } from "react-icons/bs";
+import { BsHouse } from "react-icons/bs";
+import { MdManageSearch } from "react-icons/md";
 import { BsHandbag } from "react-icons/bs";
+import { MdFavoriteBorder } from "react-icons/md";
 import "../../../css/detailhome/bottomNavigation.css";
 import { useCart } from "../common/cart/CartContext";
 
@@ -26,7 +27,7 @@ const CustomBottomNavigation = () => {
   };
 
   const handleCart = (keyTab) => {
-    navigate("/homeCart", { state: { keyTab } });
+    navigate("/cart", { state: { keyTab } });
     console.log("Tab active", keyTab);
   };
 
@@ -59,22 +60,38 @@ const CustomBottomNavigation = () => {
         onClick={() => handleHome("home")}
       />
       <BottomNavigation.Item
-        className={activeTab === "contact" ? "icon-active" : ""}
-        label="Thông báo"
-        key="contact"
+        className={activeTab === "shop" ? "icon-active" : ""}
+        label="Shop"
+        key="shop"
         icon={
           <div className="accounting-icon-wrapper">
-            <Icon icon="zi-clock-1" />
-            <div className="red-circle">1</div> {/* Replace 1 with actual notification count if needed */}
+           <MdManageSearch/>
+            <div className="red-circle">1</div>
           </div>
         }
         activeIcon={
           <div className="accounting-icon-wrapper">
-            <Icon icon="zi-clock-1" />
+            <MdManageSearch/>
             <div className="red-circle">1</div>
           </div>
         }
-        onClick={() => handleNotify("contact")}
+        onClick={() => handleNotify("shop")}
+      />
+      <BottomNavigation.Item
+        className={activeTab === "favorites" ? "icon-active" : ""}
+        label="Favorites"
+        key="favorites"
+        icon={
+          <div className="accounting-icon-wrapper">
+           <MdFavoriteBorder/>
+          </div>
+        }
+        activeIcon={
+          <div className="accounting-icon-wrapper">
+            <MdFavoriteBorder/>
+          </div>
+        }
+        onClick={() => handleNotify("favorites")}
       />
       <BottomNavigation.Item
         className={activeTab === "cart" ? "icon-active" : ""}

@@ -1,6 +1,17 @@
 /* setting zalo  */
-#wrapper-frame #right-buttons{
+body{
+  background-color: #ffffff;
+}
+.zaui-btn-tertiary.zaui-btn-neutral{
   color: #ffffff !important;
+}
+.zaui-sheet-content.zaui-sheet-content-hug-content{
+  height: 387px;
+  overflow-y: auto;
+}
+.size-list {
+  max-height: 300px; /* Hoặc chiều cao bạn muốn */
+  overflow-y: auto; /* Cho phép cuộn dọc */
 }
 
 /* end setting  */

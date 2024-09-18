@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper"; // Import module Pagination
 import "swiper/swiper-bundle.min.css";
@@ -6,6 +7,7 @@ import "swiper/swiper.min.css";
 import "../../css/detailhome/infomationpage.css";
 
 const InformationPage = () => {
+  const navigate = useNavigate();
   const items = [
     {
       id: 1,
@@ -27,6 +29,9 @@ const InformationPage = () => {
     },
   ];
 
+  const handleItemProduct = () =>{
+    navigate("/category")
+  }
   return (
     <div className="nike-page">
       <div className="event-slider">
@@ -46,7 +51,7 @@ const InformationPage = () => {
         >
           {items.map((item) => (
             <SwiperSlide key={item.id} className="information-sile">
-              <div className="slide-content">
+              <div className="slide-content" onClick={handleItemProduct}>
                 <img src={item.image} alt={item.title} className="item-image" />
                 <div className="item-info">
                   <h4 className="item-title">{item.title}</h4>
