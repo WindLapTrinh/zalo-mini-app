@@ -1,0 +1,52 @@
+/* .box-week-shop{
+
+} */
+.slider-week-shop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+  margin-top: 20px;
+}
+.info-week-shop {
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+}
+.title-week-shop {
+  font-size: 20px;
+  color: #1e2121;
+  font-weight: 500;
+}
+.category-week-shop {
+  width: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.category-week-shop::-webkit-scrollbar {
+  display: none;
+}
+.list-week-shop {
+  display: flex;
+  padding: 15px 10px 15px 10px;
+}
+.item-week-shop {
+  margin-right: 10px;
+  border-radius: 5px;
+  width: 132px;
+  height: auto;
+}
+.image-week-shop {
+  max-width: unset;
+  width: 133px;
+  height: 136px;
+}
+.name-week-shop {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  display: block;
+  color: #1e2121;
+  font-weight: 500;
+  font-size: 11px;
+}

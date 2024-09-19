@@ -1,7 +1,6 @@
 import React from "react";
-import {BottomNavigation, Box, Icon, Page, Sheet, Swiper, Text, Input} from "zmp-ui";
-
-import { FaArrowRight } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+import {Box} from "zmp-ui";
 import "../../css/detailhome/newform.css"; 
 
 const items = [
@@ -29,6 +28,11 @@ const items = [
 ];
 
 const NewForm = () => {
+  const navigate = useNavigate();
+
+  const handleNewForm = () => {
+    navigate("/home/newform");
+  }
   return (
     <div className="new-form-page">
       <Box className="page-header-new-form">
@@ -42,7 +46,7 @@ const NewForm = () => {
       </Box>
       <div className="item-body-new-form">
         {items.map((item) => (
-          <div key={item.id} className="item-card-new-form">
+          <div key={item.id} className="item-card-new-form" onClick={() => handleNewForm()}>
             <div className="item-content-new-form">
               { item.note != null ?<p className="item-note-new-form">{item.note}</p>
                                   : ""

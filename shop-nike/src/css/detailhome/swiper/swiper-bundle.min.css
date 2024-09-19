@@ -100,6 +100,7 @@
     font-size: 20px; 
     color:#1e2121;
     font-weight: 500;
+    width: 80%;
   }
   .note-product{
     font-size: 18px;
@@ -107,6 +108,7 @@
     font-weight: 400;
     margin-bottom: 8px; 
     padding: 0px 10px;
+    width: 58%;
   }
   
   .countdown-timer {

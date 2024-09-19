@@ -96,5 +96,5 @@ const ProductList = () => {
     </Box>
   );
 };
-
+ 
 export default ProductList;

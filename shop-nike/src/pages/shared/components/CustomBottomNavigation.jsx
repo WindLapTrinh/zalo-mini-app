@@ -21,10 +21,15 @@ const CustomBottomNavigation = () => {
     console.log("Tab active", keyTab);
   };
 
-  const handleNotify = (keyTab) => {
-    navigate("/notificationPage", { state: { keyTab } });
+  const handleShop = (keyTab) => {
+    navigate("/shop", { state: { keyTab } });
     console.log("Tab active", keyTab);
   };
+
+  const handleFavorites =(keyTab) => {
+    navigate("/favorites", {state: {keyTab}});
+    console.log("Tab active", keyTab);
+  }
 
   const handleCart = (keyTab) => {
     navigate("/cart", { state: { keyTab } });
@@ -75,7 +80,7 @@ const CustomBottomNavigation = () => {
             <div className="red-circle">1</div>
           </div>
         }
-        onClick={() => handleNotify("shop")}
+        onClick={() => handleShop("shop")}
       />
       <BottomNavigation.Item
         className={activeTab === "favorites" ? "icon-active" : ""}
@@ -91,7 +96,7 @@ const CustomBottomNavigation = () => {
             <MdFavoriteBorder/>
           </div>
         }
-        onClick={() => handleNotify("favorites")}
+        onClick={() => handleFavorites("favorites")}
       />
       <BottomNavigation.Item
         className={activeTab === "cart" ? "icon-active" : ""}

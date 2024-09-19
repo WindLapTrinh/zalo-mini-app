@@ -1,0 +1,46 @@
+.menu-page {
+    background-image: url('./images/banner/banner-1.jpg');
+    color: white;
+    font-weight: 500;
+  }
+  
+  .menu-item {
+    border-bottom: 1px solid white;
+    position: relative; /* Ensure positioning doesn't affect background */
+  }
+  
+  .parent-category {
+    padding: 26px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .parent-category h2 {
+    margin: 0;
+    font-size: 16px;
+    color: white;
+  }
+  
+  .sub-category {
+    background-color: #ffffff;
+    color: black;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+  }
+  
+  .sub-category-item {
+    padding: 20px 15px;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Expand sub-categories without affecting the background image */
+  .parent-category.active + .sub-category {
+    max-height: 500px; /* Adjust depending on content */
+  }
+  
+  /* Ensure the background stays fixed and doesn't change */
+  
+  

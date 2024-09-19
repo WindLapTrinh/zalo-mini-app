@@ -1,0 +1,24 @@
+.find-you-title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  padding: 20px 10px 0px 10px;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px; 
+  margin-left: -3px;
+  margin-right: -3px;
+}
+
+.image-item {
+  width: calc(33.3333% - 2px);
+}
+
+.image-item img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}

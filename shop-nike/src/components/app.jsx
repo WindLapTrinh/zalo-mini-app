@@ -8,6 +8,9 @@ import Home from "../pages/home/Home.jsx";
 import Product from "../pages/product/Home.jsx"
 import Cart from "../pages/cart/Home.jsx"
 import Category from "../pages/product/Category.jsx"
+import HomeNewForm from "../pages/newform/Home.jsx"
+import Shop from "../pages/shop/Home.jsx"
+import Favorites from "../pages/favorites/Home.jsx"
 import { CartProvider } from "../pages/shared/common/cart/CartContext";
 import { PaymentProvider } from "../pages/shared/common/payment/PaymentContext";
 import { AddressProvider } from "../pages/shared/common/cart/AddressContext.jsx";
@@ -28,6 +31,9 @@ const MyApp = () => {
                       <Route path="/product" element={<Product setTasks={setTasks} tasks={tasks} />} />
                       <Route path="/category" element={<Category setTasks={setTasks} tasks={tasks} />} />
                       <Route path="/cart" element={<Cart setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/home/newform" element={<HomeNewForm setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/shop" element={<Shop setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/favorites" element={<Favorites setTasks={setTasks} tasks={tasks} />} />
 
                     </AnimationRoutes>
                   </ZMPRouter>

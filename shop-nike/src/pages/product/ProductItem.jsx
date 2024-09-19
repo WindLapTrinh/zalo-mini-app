@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Box, Text, Icon } from "zmp-ui";
+import { Box, Text } from "zmp-ui";
 import { useNavigate } from "react-router-dom";
-import SheetCart from "../shared/common/cart/SheetCart"; 
+import useToast from "../shared/hooks/useToast";
 
 const ProductItem = ({ product }) => {
   const navigate = useNavigate();
   const [actionSheetVisible, setActionSheetVisible] = useState(false);
+  const showToast = useToast();
 
   const handleDetailProduct = () => {
     navigate("/detailProduct");
@@ -24,6 +25,13 @@ const ProductItem = ({ product }) => {
     navigate("/homeCart");
   };
 
+  const handleAddToFavorites = () => {
+    const existingFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
+    const updatedFavorites = [...existingFavorites, product];
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+    showToast("Đã thêm vào danh sách yêu thích!");
+  };
+
   return (
     <div className="space-y-2 product-index">
       <div onClick={handleDetailProduct}>
@@ -38,20 +46,13 @@ const ProductItem = ({ product }) => {
         <Text className="product-name-item">{product.name}</Text>
       </div>
       <Text size="xxSmall" className="text-gray pb-2">
-        <span className="product-price">{product.price.toLocaleString("vi-VN")} đ</span>
-        <span onClick={handleSetActiveSheet}>
-          <Box className="product-icon">
-            {product.icon}
-          </Box>
+        <span className="product-price">
+          {product.price.toLocaleString("vi-VN")} đ
+        </span>
+        <span onClick={handleAddToFavorites}>
+          <Box className="product-icon">{product.icon}</Box>
         </span>
       </Text>
-      <SheetCart
-        product={product}
-        visible={actionSheetVisible}
-        onClose={() => setActionSheetVisible(false)}
-        onAddToCart={handleAddToCart}
-        onPayment={handlePayment}
-      />
     </div>
   );
 };

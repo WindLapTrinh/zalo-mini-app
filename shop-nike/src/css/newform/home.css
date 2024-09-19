@@ -1,0 +1,73 @@
+.new-form-shose {
+    display: flneex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .item-form-shose{
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  .img-form-shose {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .content-form-shose {
+    padding: 10px;
+  }
+  
+  .title-form-shose {
+    font-size: 18px;
+    margin-top: 31px;
+    margin-bottom: 8px;
+  }
+  
+  .description-form-shose {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 16px;
+  }
+  .func-form-shose{
+    padding: 0px 10px;
+  }
+  
+  .button-form-shose {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+  }
+  
+  .footer-form-shose {
+    padding: 15px 0px;
+    font-size: 20px;
+  }
+  .comment-icon {
+    margin-right: 8px;
+  }
+  .comment-form-shose {
+    padding: 15px 15px 73px 15px;    
+    position: relative;
+  }
+  
+  .comment-form-shose::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 0; /* Di chuyển line lên trên */
+    height: 1px;
+    background-color: #ccc;
+  }
+  .title-comment{
+    font-weight: 500;
+    padding-bottom: 15px;
+  }
+  

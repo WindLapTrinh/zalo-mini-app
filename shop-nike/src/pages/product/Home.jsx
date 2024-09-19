@@ -23,7 +23,7 @@ import "../../css/product/productDetail.css";
 const product = {
   id: 1,
   name: "Nike Dunk Low Red",
-  image: "/images/product/product-10.jpg",
+  image: "/images/product/product-23.jpg",
   price: 24490000,
   description:
     "Không thể nào thoải mái hơn - Giày Sneaker Nam Air Max 90! Đôi giày vẫn giữ nguyên những đặc trưng của dòng giày chạy bộ Nike trứ danh: với đế Waffle nổi tiếng, các lớp vải may và các chi tiết TPU cổ điển. Những màu sắc ấn tượng thể hiện phong cách mới của bạn, trong khi đệm Max Air mang lại sự thoải mái trên mọi hành trình.",
@@ -74,7 +74,6 @@ const product = {
     },
   ],
 };
-const sizes = ["US 38", "US 39", "US 40", "US 41", "US 42"];
 
 const Home = () => {
   const navigate = useNavigate();
