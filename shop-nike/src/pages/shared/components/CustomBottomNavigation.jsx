@@ -36,8 +36,8 @@ const CustomBottomNavigation = () => {
     console.log("Tab active", keyTab);
   };
 
-  const handleContactUser = (keyTab) => {
-    navigate("/contactUser", { state: { keyTab } });
+  const handleProfile = (keyTab) => {
+    navigate("/profile", { state: { keyTab } });
     console.log("Tab active", keyTab);
   };
 
@@ -101,7 +101,7 @@ const CustomBottomNavigation = () => {
       <BottomNavigation.Item
         className={activeTab === "cart" ? "icon-active" : ""}
         key="cart"
-        label="Giỏ hàng"
+        label="Bag"
         icon={
           <div className="accounting-icon-wrapper">
             <BsHandbag />
@@ -119,7 +119,7 @@ const CustomBottomNavigation = () => {
       <BottomNavigation.Item
         className={activeTab === "user" ? "icon-active" : ""}
         key="user"
-        label="Cá nhân"
+        label="Profile"
         icon={
           <div className="accounting-icon-wrapper">
             <Icon icon="zi-user" />
@@ -130,7 +130,7 @@ const CustomBottomNavigation = () => {
             <Icon icon="zi-user-solid" />
           </div>
         }
-        onClick={() => handleContactUser("user")}
+        onClick={() => handleProfile("profile")}
       />
     </BottomNavigation>
   );

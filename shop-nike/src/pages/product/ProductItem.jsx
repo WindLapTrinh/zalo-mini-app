@@ -1,35 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Text } from "zmp-ui";
 import { useNavigate } from "react-router-dom";
+import { MdFavoriteBorder, MdFavorite } from "react-icons/md"; // Import both icons
+import useFavorites from "../shared/hooks/useFavorites"; // Import the custom hook
 import useToast from "../shared/hooks/useToast";
 
 const ProductItem = ({ product }) => {
   const navigate = useNavigate();
-  const [actionSheetVisible, setActionSheetVisible] = useState(false);
   const showToast = useToast();
+  const { addToFavorites, removeFromFavorites, isFavorite } = useFavorites(); // Use the hook
 
+  // Handle product detail navigation
   const handleDetailProduct = () => {
-    navigate("/detailProduct");
+    navigate("/product");
   };
 
-  const handleSetActiveSheet = () => {
-    setActionSheetVisible(true);
-  };
-
-  const handleAddToCart = () => {
-    setActionSheetVisible(false);
-  };
-
-  const handlePayment = () => {
-    setActionSheetVisible(false);
-    navigate("/homeCart");
-  };
-
-  const handleAddToFavorites = () => {
-    const existingFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
-    const updatedFavorites = [...existingFavorites, product];
-    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-    showToast("Đã thêm vào danh sách yêu thích!");
+  // Handle adding/removing the product to/from favorites
+  const handleToggleFavorites = () => {
+    if (isFavorite(product.id)) {
+      removeFromFavorites(product.id);
+      showToast("Đã xóa khỏi danh sách yêu thích!"); // Show toast message for removing from favorites
+    } else {
+      addToFavorites(product);
+      showToast("Đã thêm vào danh sách yêu thích!"); // Show toast message for adding to favorites
+    }
   };
 
   return (
@@ -49,8 +43,11 @@ const ProductItem = ({ product }) => {
         <span className="product-price">
           {product.price.toLocaleString("vi-VN")} đ
         </span>
-        <span onClick={handleAddToFavorites}>
-          <Box className="product-icon">{product.icon}</Box>
+        {/* Toggle between favorite and non-favorite icons on click */}
+        <span onClick={handleToggleFavorites}>
+          <Box className="product-icon">
+            {isFavorite(product.id) ? <MdFavorite /> : <MdFavoriteBorder />}
+          </Box>
         </span>
       </Text>
     </div>

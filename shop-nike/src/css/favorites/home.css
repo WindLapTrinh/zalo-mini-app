@@ -1,0 +1,16 @@
+.box-favorites{
+    padding: 10px 0px 88px 0px;
+
+}
+.info-category-favorites{
+    display: flex;
+    align-items: center;
+}
+.img-favorites{
+    width: 40px;
+    margin: 0px 10px;
+}
+.title-favrites{
+    font-weight: 500;
+    font-size: 18px;
+}

@@ -1,0 +1,51 @@
+
+/* Profile Information */
+.profile-information {
+  margin-top: 50px;
+}
+
+.profile-avatar {
+  display: block;
+  margin: 0 auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 46px;
+}
+
+.edit-profile-btn {
+  display: block;
+  margin: 0 auto;
+  background: white;
+  color: black;
+  border: 1px solid #ccc;
+}
+
+/* Profile Functions */
+.profile-functions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.profile-func-item {
+  flex: 1;
+  padding: 20px 0;
+}
+
+.border-right {
+  border-right: 1px solid #e0e0e0;
+}
+
+.profile-func-icon {
+  margin-bottom: 10px;
+}
+
+.profile-func-name {
+  font-size: 14px;
+}
+.name-profile{
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+/* and profile infomation  */

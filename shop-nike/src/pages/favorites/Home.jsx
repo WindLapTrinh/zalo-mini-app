@@ -1,25 +1,39 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Text } from "zmp-ui";
+import ProductItem from "../product/ProductItem";
+import useFavorites from "../shared/hooks/useFavorites"; 
+import CustomBottomNavigation from "../shared/components/CustomBottomNavigation";
+import CustomHeader from "../shared/pages/CustomHeader";
+import UpdateFavorites from "../shared/pages/UpdateFavorites";
+import "../../css/favorites/home.css";
 
-const Home = () => {
-  const [favorites, setFavorites] = useState([]);
+const FavoritesPage = () => {
+  const { favorites } = useFavorites(); // Get favorite products
 
   return (
-    <div>
-      <Text size="large" className="favorite-title">Danh sách yêu thích</Text>
-      {favorites.length === 0 ? (
-        <Text size="medium">Chưa có sản phẩm nào trong danh sách yêu thích</Text>
-      ) : (
-        favorites.map((product, index) => (
-          <Box key={index} className="favorite-item">
-            <img src={product.image} alt={product.name} className="w-full h-auto rounded-lg" />
-            <Text className="favorite-item-name">{product.name}</Text>
-            <Text className="favorite-item-price">{product.price.toLocaleString("vi-VN")} đ</Text>
+    <Box className="page-favorites">
+      <CustomHeader title={"Favorites"} />
+
+      <Box className="box-favorites">
+        {favorites.length > 0 ? (
+          <Box className="category-favorites">
+            <Box className="info-category-favorites">
+              <img className="img-favorites" src="./images/icon/icon-new-form.png" alt="Icon shose" />
+              <Text className="title-favrites">Nike Dunk Low</Text>
+            </Box>
+            <Box className="grid grid-cols-2 gap-4">
+              {favorites.map((product) => (
+                <ProductItem key={product.id} product={product} />
+              ))}
+            </Box>
           </Box>
-        ))
-      )}
-    </div>
+        ) : (
+         <UpdateFavorites/>
+        )}
+      </Box>
+      <CustomBottomNavigation />
+    </Box>
   );
 };
 
-export default Home;
+export default FavoritesPage;
