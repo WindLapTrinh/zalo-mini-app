@@ -1,12 +1,12 @@
-import React from 'react';
-import { Box, Button, Text, Avatar } from 'zmp-ui';
-import '../../css/profile/home.css'; // Custom CSS for styling
+import React from "react";
+import { Box, Button, Text, Avatar } from "zmp-ui";
+import "../../css/profile/home.css"; // Custom CSS for styling
 
 const Information = () => {
   return (
     <Box className="profile-information" textAlign="center">
       <img
-        src="https://via.placeholder.com/250" // Placeholder image URL for avatar
+        src="./images/logo/wind-app.png" // Placeholder image URL for avatar
         size="large"
         alt="User Avatar"
         className="profile-avatar"
