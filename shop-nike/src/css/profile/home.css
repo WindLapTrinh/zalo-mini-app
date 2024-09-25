@@ -1,4 +1,7 @@
 
+.box-profile{
+  padding-bottom: 60px;
+}
 /* Profile Information */
 .profile-information {
   margin-top: 50px;
@@ -68,9 +71,19 @@
   justify-content: space-between;
   margin-top: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #ccc;
+  position: relative;
 
 }
+.item-box-event::before{
+  content: "";
+    position: absolute;
+    left: 4px;
+    right: 8px;
+    top: 55px;
+    height: 1px;
+    background-color: #ececec;
+}
+
 .title-item-event{
   font-weight: 500;
   font-size: 20px;
@@ -81,3 +94,17 @@
   color: #828282;
 }
 /* end event  */
+/* vesion  */
+.box-vesion{
+  background: #ececec;
+  padding: 13px 0px;
+  margin-top: 10px;
+}
+.text-vesion{
+  font-weight: 500;
+  padding: 0px 10px;
+  text-align: center;
+  color: #7e7e7e;
+  font-size: 13px;
+}
+/* and vesion  */
