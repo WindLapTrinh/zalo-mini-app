@@ -108,3 +108,45 @@
   font-size: 13px;
 }
 /* and vesion  */
+
+/* inbox  */
+.item-inbox{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  position: relative;
+}
+.item-inbox::before{
+  content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 109px;
+    height: 1px;
+    background-color: #ececec;
+}
+.header-inbox{
+  margin-right: 10px;
+}
+.image-inbox{
+  max-width: unset;
+  width: 82px;
+  margin-right: 5px;
+  height: 100px;
+}
+.title-inbox{
+  font-size: 16px;
+    font-weight: 500;
+}
+.description-inbox{
+  font-size: 13px;
+}
+.description-inbox,
+.time-inbox{
+  color: #9a9a9a;
+}
+.time-inbox{
+  font-size: 13px;
+}
+/* end inbox  */

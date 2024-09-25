@@ -1,11 +1,16 @@
 import React from "react";
 import { Box, Text, Icon } from "zmp-ui";
+import { useNavigate } from "react-router-dom";
 
 const Events = () => {
+    const navigate = useNavigate();
+    const handleInbox = () => {
+        navigate('/inbox');
+    }
     return(
         <Box className="box-event">
             <Box className="item-box-event">
-                <Box className="left-item-event">
+                <Box className="left-item-event" onClick={() => handleInbox()}>
                     <Text className="title-item-event">Inbox</Text>
                     <Text className="description-item-event">View Messages</Text>
                 </Box>
