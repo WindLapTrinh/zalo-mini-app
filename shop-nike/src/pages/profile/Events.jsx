@@ -7,6 +7,9 @@ const Events = () => {
     const handleInbox = () => {
         navigate('/inbox');
     }
+    const handleMemberRewards = () => {
+        navigate('/memberRewards');
+    }
     return(
         <Box className="box-event">
             <Box className="item-box-event">
@@ -19,7 +22,7 @@ const Events = () => {
                 </Box>
             </Box>
             <Box className="item-box-event">
-                <Box className="left-item-event">
+                <Box className="left-item-event" onClick={() => handleMemberRewards()}>
                     <Text className="title-item-event">You Nike Member Rewards</Text>
                     <Text className="description-item-event">2 available</Text>
                 </Box>

@@ -13,6 +13,7 @@ import Shop from "../pages/shop/Home.jsx";
 import Favorites from "../pages/favorites/Home.jsx";
 import Profile from "../pages/profile/Home.jsx";
 import Inbox from "../pages/profile/Inbox.jsx";
+import MemberRewards from "../pages/profile/MemberRewards.jsx";
 
 import { CartProvider } from "../pages/shared/common/cart/CartContext";
 import { PaymentProvider } from "../pages/shared/common/payment/PaymentContext";
@@ -39,6 +40,7 @@ const MyApp = () => {
                       <Route path="/favorites" element={<Favorites setTasks={setTasks} tasks={tasks} />} />
                       <Route path="/profile" element={<Profile setTasks={setTasks} tasks={tasks} />} />
                       <Route path="/inbox" element={<Inbox setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/memberRewards" element={<MemberRewards setTasks={setTasks} tasks={tasks} />} />
 
                     </AnimationRoutes>
                   </ZMPRouter>

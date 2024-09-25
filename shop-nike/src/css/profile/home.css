@@ -1,5 +1,4 @@
-
-.box-profile{
+.box-profile {
   padding-bottom: 60px;
 }
 /* Profile Information */
@@ -62,45 +61,45 @@
 /* and profile infomation  */
 
 /* event  */
-.box-event{
+.box-event {
   padding: 0px 15px;
+  margin-top: 40px;
 }
-.item-box-event{
+.item-box-event {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 20px;
   padding-bottom: 20px;
   position: relative;
-
 }
-.item-box-event::before{
+.item-box-event::before {
   content: "";
-    position: absolute;
-    left: 4px;
-    right: 8px;
-    top: 55px;
-    height: 1px;
-    background-color: #ececec;
+  position: absolute;
+  left: 4px;
+  right: 8px;
+  top: 55px;
+  height: 1px;
+  background-color: #ececec;
 }
 
-.title-item-event{
+.title-item-event {
   font-weight: 500;
   font-size: 20px;
 }
-.description-item-event{
+.description-item-event {
   padding-top: 5px;
   font-size: 12px;
   color: #828282;
 }
 /* end event  */
 /* vesion  */
-.box-vesion{
+.box-vesion {
   background: #ececec;
   padding: 13px 0px;
   margin-top: 10px;
 }
-.text-vesion{
+.text-vesion {
   font-weight: 500;
   padding: 0px 10px;
   text-align: center;
@@ -110,43 +109,75 @@
 /* and vesion  */
 
 /* inbox  */
-.item-inbox{
+.item-inbox {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
   position: relative;
 }
-.item-inbox::before{
+.item-inbox::before {
   content: "";
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 109px;
-    height: 1px;
-    background-color: #ececec;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 109px;
+  height: 1px;
+  background-color: #ececec;
 }
-.header-inbox{
+.header-inbox {
   margin-right: 10px;
 }
-.image-inbox{
+.image-inbox {
   max-width: unset;
   width: 82px;
   margin-right: 5px;
   height: 100px;
 }
-.title-inbox{
+.title-inbox {
   font-size: 16px;
-    font-weight: 500;
+  font-weight: 500;
 }
-.description-inbox{
+.description-inbox {
   font-size: 13px;
 }
 .description-inbox,
-.time-inbox{
+.time-inbox {
   color: #9a9a9a;
 }
-.time-inbox{
+.time-inbox {
   font-size: 13px;
 }
 /* end inbox  */
+/* member rewards */
+.member-rewards-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background-color: #989898;
+}
+
+.image-container {
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reward-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.image-counter {
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
