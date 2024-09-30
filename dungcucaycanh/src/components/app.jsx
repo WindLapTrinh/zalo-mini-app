@@ -8,7 +8,7 @@ import Home from "../pages/home/Home.jsx";
 import CategoryByProduct from "../pages/category/CategoryByProduct.jsx";
 import ProductDetail from "../pages/category/ProductDetail.jsx";
 import NotificationPage from "../pages/notify/NotificationPage.jsx";
-import User from "../pages/user/Home.jsx";
+import User from "../pages/user/UserPage.jsx";
 import PurchaseHistory from "../pages/cart/PurchaseHistory.jsx";
 import HomeCart from "../pages/cart/HomeCart.jsx";
 import UpdatePage from "../pages/shared/pages/Update.jsx";

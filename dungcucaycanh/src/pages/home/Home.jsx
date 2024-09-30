@@ -19,7 +19,6 @@ import Introduce from "@/pages/home/Introduce";
 import HeaderListProduct from "@/pages/home/HeaderListProduct";
 
 import CustomBottomNavigation from "../shared/components/CustomBottomNavigation";
-import SetTitleHeader from "@/pages/shared/hooks/setTitleHeader";
 import Popup from "@/pages/shared/pages/Popup";
 import CustomHeader from "../shared/pages/CustomHeader";
 const products = [

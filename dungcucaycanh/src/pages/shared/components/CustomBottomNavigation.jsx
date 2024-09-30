@@ -63,7 +63,7 @@ const CustomBottomNavigation = () => {
         icon={
           <div className="accounting-icon-wrapper">
             <Icon icon="zi-clock-1" />
-            <div className="red-circle">1</div> {/* Replace 1 with actual notification count if needed */}
+            <div className="red-circle">1</div>
           </div>
         }
         activeIcon={
