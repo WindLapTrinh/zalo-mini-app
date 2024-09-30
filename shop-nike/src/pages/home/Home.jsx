@@ -30,13 +30,13 @@ const Home = (props) => {
         imageUrl={"./images/logo/wind-app.png"}
       />
       <Page className="home">
-        <Introduce/>
-        <CategoryProduct/>
-        <InformationPage/>
-        <NewForm/>
-        <StoriesForYou/>
-        <ThankPage/>
-        <CustomBottomNavigation/>
+        <Introduce />
+        <CategoryProduct />
+        <InformationPage />
+        <NewForm />
+        <StoriesForYou />
+        <ThankPage />
+        <CustomBottomNavigation />
       </Page>
     </Box>
   );

@@ -1,0 +1,35 @@
+.page-payment{
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+/* .info-payment{
+    background-color: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  
+} */
+.header-info-payment{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.icon-info-payment{
+  font-size: 18px;
+  color: #696f6a;
+}
+.title-info-payment{
+  color: #696f6a;
+  font-weight: 500;
+}
+.detail-shipping-payment{
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #333;
+    padding-bottom: 10px;
+   
+}
+  

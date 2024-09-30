@@ -2,17 +2,14 @@ import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { BottomNavigation, Icon } from "zmp-ui";
 import { BsHouse } from "react-icons/bs";
-import { MdManageSearch } from "react-icons/md";
-import { BsHandbag } from "react-icons/bs";
-import { MdFavoriteBorder } from "react-icons/md";
-import "../../../css/detailhome/bottomNavigation.css";
-import { useCart } from "../common/cart/CartContext";
+import { BsCart } from "react-icons/bs";
+import { openChatScreen } from "../../pages/shared/utils/openChatScreen";
 
+import "../../css/detailhome/bottomNavigation.css";
 const CustomBottomNavigation = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { keyTab } = location.state || {};
-  const { getCartCount } = useCart();
 
   const [activeTab, setActiveTab] = useState(keyTab || "home");
 
@@ -20,31 +17,24 @@ const CustomBottomNavigation = () => {
     navigate("/", { state: { keyTab } });
     console.log("Tab active", keyTab);
   };
-
-  const handleShop = (keyTab) => {
-    navigate("/shop", { state: { keyTab } });
+  const handleNotify = (keyTab) => {
+    navigate("/notificationPage", { state: { keyTab } });
     console.log("Tab active", keyTab);
   };
-
-  const handleFavorites =(keyTab) => {
-    navigate("/favorites", {state: {keyTab}});
-    console.log("Tab active", keyTab);
-  }
-
   const handleCart = (keyTab) => {
-    navigate("/cart", { state: { keyTab } });
+    navigate("/homeCart", { state: { keyTab } });
     console.log("Tab active", keyTab);
   };
-
-  const handleProfile = (keyTab) => {
-    navigate("/profile", { state: { keyTab } });
+  const handleContactUser = (keyTab) => {
+    navigate("/contactUser", { state: { keyTab } });
     console.log("Tab active", keyTab);
   };
-
+  const handleMess = (keyTab) => {
+    console.log("Tab active", keyTab);
+  };
   return (
     <BottomNavigation
       fixed
-      className="bottom-navigation"
       activeKey={activeTab}
       onChange={(key) => setActiveTab(key)}
     >
@@ -62,64 +52,62 @@ const CustomBottomNavigation = () => {
             <BsHouse />
           </div>
         }
-        onClick={() => handleHome("home")}
+        onClick={() => {
+          handleHome("home");
+        }}
       />
       <BottomNavigation.Item
-        className={activeTab === "shop" ? "icon-active" : ""}
-        label="Shop"
-        key="shop"
+        className={activeTab === "contact" ? "icon-active" : ""}
+        label="Thông báo"
+        key="contact"
         icon={
           <div className="accounting-icon-wrapper">
-           <MdManageSearch/>
-            <div className="red-circle">1</div>
+            <Icon icon="zi-clock-1" />
           </div>
         }
-        activeIcon={
-          <div className="accounting-icon-wrapper">
-            <MdManageSearch/>
-            <div className="red-circle">1</div>
-          </div>
-        }
-        onClick={() => handleShop("shop")}
-      />
-      <BottomNavigation.Item
-        className={activeTab === "favorites" ? "icon-active" : ""}
-        label="Favorites"
-        key="favorites"
-        icon={
-          <div className="accounting-icon-wrapper">
-           <MdFavoriteBorder/>
-          </div>
-        }
-        activeIcon={
-          <div className="accounting-icon-wrapper">
-            <MdFavoriteBorder/>
-          </div>
-        }
-        onClick={() => handleFavorites("favorites")}
+        activeIcon={<Icon icon="zi-clock-1-solid" />}
+        onClick={() => {
+          handleNotify("contact");
+        }}
       />
       <BottomNavigation.Item
         className={activeTab === "cart" ? "icon-active" : ""}
         key="cart"
-        label="Bag"
+        label="Giỏ hàng"
         icon={
           <div className="accounting-icon-wrapper">
-            <BsHandbag />
-            {getCartCount() > 0 && <div className="red-circle">{getCartCount()}</div>}
+            <BsCart />
           </div>
         }
         activeIcon={
           <div className="accounting-icon-wrapper">
-            <BsHandbag />
-            {getCartCount() > 0 && <div className="red-circle">{getCartCount()}</div>}
+            <BsCart />
           </div>
         }
-        onClick={() => handleCart("cart")}
+        onClick={() => {
+          handleCart("cart");
+        }}
       />
       <BottomNavigation.Item
-        className={activeTab === "profile" ? "icon-active" : ""}
-        key="profile"
-        label="Profile"
+        className={activeTab === "mess" ? "icon-active" : ""}
+        key="mess"
+        label="Nhắn tin"
+        icon={
+          <div className="accounting-icon-wrapper">
+            <Icon icon="zi-chat" />
+          </div>
+        }
+        activeIcon={
+          <div className="accounting-icon-wrapper">
+            <Icon icon="zi-chat" />
+          </div>
+        }
+        onClick={openChatScreen}
+      />
+      <BottomNavigation.Item
+        className={activeTab === "user" ? "icon-active" : ""}
+        key="user"
+        label="Cá nhân"
         icon={
           <div className="accounting-icon-wrapper">
             <Icon icon="zi-user" />
@@ -130,7 +118,9 @@ const CustomBottomNavigation = () => {
             <Icon icon="zi-user-solid" />
           </div>
         }
-        onClick={() => handleProfile("profile")}
+        onClick={() => {
+          handleContactUser("user");
+        }}
       />
     </BottomNavigation>
   );

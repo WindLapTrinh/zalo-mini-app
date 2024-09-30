@@ -1,0 +1,39 @@
+.order-product-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    z-index: 1000; /* Đảm bảo rằng nó nằm trên các phần tử khác */
+  }
+  
+  .payment-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;    
+  }
+  .order-product-cart{
+    background-color: #fff;
+    padding: 12px;
+    margin-bottom: 85px  !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .payment-summary {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .btn-payment {
+   background: #5ccc0c !important;
+  }
+  .calculate-total{
+    font-weight: 500;
+    color: #5ccc0c;
+  }
+  
