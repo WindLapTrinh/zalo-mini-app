@@ -2,17 +2,19 @@
   padding: 0px 10px 5px 10px;
 } */
 .category-product {
-    background: rgb(72, 202, 228);
-    color: #333;
+    color: #1e2121;
     border-radius: 5px;
     height: 86px;
     width: 100%;
     height: 100%;
     overflow-x: scroll;
     white-space: nowrap;
-    padding: 10px 0px 10px 10px;
+    padding: 0px 0px 10px 10px;
+    margin-top: 5px;
   }
-  
+  .img-basletball{
+    width: 32px;
+  }
   .category-product {
     width: 100%;
     overflow-x: scroll;
@@ -35,16 +37,26 @@
   .category-item{
     margin-right: 10px;
     border-radius: 5px;
-    background: #ffffff;
-    padding: 6px;
     width: 132px;
     height: auto;
   }
   .custom-border-image{
-    width: 114px;
+    max-width: unset;
+    width: 133px;
+    border-radius: 8px;
+    height: 136px;
   }
    .name-product-today{
     display: block;
+    color: #1e2121;
+    font-weight: 500;
+    font-size: 11px;
+  }
+  .description-product-today{
+    white-space: normal; 
+    word-wrap: break-word; 
+    font-size: 11px;
+    color: #a8a8a8;
   }
   .content-product-today{
     color: #028090;
@@ -53,20 +65,16 @@
 .custom-text-gray {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  text-align: left;
 }
 
-.name-product-today, .price-product-today {
-  margin: 4px 0;
-}
   .icon-product-today{
     float: left;
     margin-right: 5px;
-    color: #ffffff;
+    color: #1e2121;
     font-weight: 500;
-    font-size: 20px;
-    padding-left: 10px;
+    font-size: 26px;
+    padding-left: 5px;
   }
 
   /* flas sale  */
@@ -76,6 +84,7 @@
     justify-content: space-between; 
     align-items: center; 
     padding-right: 10px;
+    margin-top: 20px;
   }
   
   .infomation-sale {
@@ -88,9 +97,18 @@
   }
   
   .title-product {
-    font-size: 14px; 
-    color:#ffffff;
+    font-size: 20px; 
+    color:#1e2121;
     font-weight: 500;
+    width: 80%;
+  }
+  .note-product{
+    font-size: 18px;
+    color: #736d6d;
+    font-weight: 400;
+    margin-bottom: 8px; 
+    padding: 0px 10px;
+    width: 58%;
   }
   
   .countdown-timer {
@@ -99,17 +117,4 @@
     gap: 8px; 
   }
   
-  .countdown-timer div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 24px;
-    height: 24px;
-    background-color: #ffffff;
-    border-radius: 34%;
-    border: 1px solid #ffffff;
-    font-size: 13px;
-    font-weight: bold;
-    color: #857272;
-  }
   

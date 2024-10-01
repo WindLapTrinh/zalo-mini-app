@@ -22,8 +22,8 @@ const OrderProduct = ({ items }) => {
     <Box className="order-product-container">
       <Box className="order-product-cart">
         <Box className="payment-summary">
-          <Text size="medium" bold>
-            Tổng cộng:
+          <Text size="medium" bold className="text-sum-cart">
+            Tổng cộng
           </Text>
           <Text className="calculate-total" size="medium">{totalPrice.toLocaleString("vi-VN")} đ</Text>
         </Box>

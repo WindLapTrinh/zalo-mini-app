@@ -1,81 +1,72 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Box, Text } from "zmp-ui";
-import { BsAndroid2 } from "react-icons/bs";
+import { BsCardChecklist } from "react-icons/bs";
 import "../../css/detailhome/swiper/swiper-bundle.min.css";
 const categories = [
   {
     id: 1,
-    name: "Thiết kế Website",
-    image: "/images/product/desgin-webiste.jpg",
-    content: "Xem thêm...",
+    name: "Nike Dunk Low",
+    image: "/images/product/product-14.jpg",
+    description: "Men's Hard Court Tennis",
+    price: "13.990.000",
   },
   {
     id: 2,
-    name: "Thiết kế Phần mềm",
-    image: "/images/product/desgin-sofware.png",
-    content: "Xem thêm...",
+    name: "Nike Ari Max",
+    image: "/images/product/product-15.jpg",
+    description: "Men's T-Shirt",
+    price: "29.490.000",
   },
   {
     id: 3,
-    name: "Zalo Mini App",
-    image: "/images/product/desgin-mini-app.png",
-    content: "Xem thêm...",
+    name: "Nike Dunk Low",
+    image: "/images/product/product-16.jpg",
+    description: "Older Kids'Shoes",
+    price: "10.190.000",
   },
   {
     id: 4,
-    name: "Brand thương hiệu",
-    image: "/images/product/brand.png",
-    content: "Xem thêm...",
+    name: "JobDan Hiegh",
+    image: "/images/product/product-17.jpg",
+    description: "Women's Shoes",
+    price: "24.990.000",
   },
 ];
 
 const CategoryProduct = () => {
-  const [timeRemaining, setTimeRemaining] = useState(3600); // initial time in seconds (1 hour)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTimeRemaining((prevTime) => {
-        if (prevTime <= 0) {
-          clearInterval(interval);
-          return 0;
-        }
-        return prevTime - 1;
-      });
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const formatTime = (seconds) => {
-    const hours = Math.floor(seconds / 3600);
-    const minutes = Math.floor((seconds % 3600) / 60);
-    const secs = seconds % 60;
-
-    return { hours, minutes, secs };
+  const navigate = useNavigate();
+  const handelItemProduct = () => {
+    navigate("/product");
   };
 
-  const { hours, minutes, secs } = formatTime(timeRemaining);
   return (
     <Box className="product-today">
       <Box className="header-slider-category mb-4">
         <div className="infomation-sale">
           <div className="icon-product-today">
-            <BsAndroid2 />
+            <img
+              className="img-basletball"
+              src="./images/icon/iocn-basketball.png"
+              alt=""
+            />
           </div>
           <Text.Title size="small" className="title-product">
-            Dịch vụ Design
+            Top Picks for You
           </Text.Title>
         </div>
-        <div className="countdown-timer">
-          <img className="img-ai" src="./images/icon/icon-ai.png" alt="" />
-        </div>
+        <div className="countdown-timer">Tất cả</div>
       </Box>
+      <Text.Title size="small" className="note-product">
+        Recommended products
+      </Text.Title>
       <Box mt={2} className="category-product">
         <Box className="slider-category p-4">
           {categories.map((category) => (
             <div
               key={category.id}
-              className="custom-slider-item flex flex-col space-y-2 items-center category-item"
+              className="custom-slider-item flex flex-col space-y-2 category-item"
+              onClick={() => handelItemProduct()}
             >
               <img
                 className="custom-border-image"
@@ -88,7 +79,10 @@ const CategoryProduct = () => {
                     ? `${category.name.substring(0, 18)}...`
                     : category.name}
                 </span>
-                <span className="content-product-today">{category.content}</span>
+                <span className="description-product-today">
+                  {category.description}
+                </span>
+                <span className="price-product-today">{category.price} đ</span>
               </Text>
             </div>
           ))}

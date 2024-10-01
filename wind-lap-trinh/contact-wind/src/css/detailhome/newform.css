@@ -1,0 +1,92 @@
+/* Header section styling */
+.page-header-new-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0px 10px;
+}
+
+.title-new-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.img-new-form {
+  width: 44px;
+}
+.title-header-new-form {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.view-all {
+  text-decoration: none;
+  color: #5c5c5c;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.view-all svg {
+  font-size: 16px;
+}
+
+/* Container for item cards */
+.item-body-new-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Styling for each item card */
+.item-card-new-form {
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 370px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.item-card-new-form:nth-child(1) {
+  background-image: url("./images/infomation/anh-1.jpeg");
+}
+
+.item-card-new-form:nth-child(2) {
+  background-image: url("https://cdn.dribbble.com/users/4973491/screenshots/11611040/media/4785c6201e79cb18be0c0baa2deb35c5.gif");
+}
+
+.item-card-new-form:nth-child(3) {
+  background-image: url("./images/product/product-9.jpg");
+}
+
+/* Content inside item card */
+.item-content-new-form {
+  padding: 10px;
+}
+
+.item-title-new-form {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.item-note-new-form {
+  font-size: 14px;
+}
+
+.item-button-new-form {
+  background-color: #ffffff;
+  border: none;
+  color: black;
+  padding: 8px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: 500;
+}

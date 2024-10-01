@@ -4,8 +4,8 @@ import { configAppView } from "zmp-sdk/apis";
 const SetTitleHeader = ({ title, headerColor, statusBarColor, headerTextColor }) => {
   useEffect(() => {
     configAppView({
-      headerColor: headerColor || "#028090",
-      statusBarColor: statusBarColor || "#028090",
+      headerColor: headerColor || "#1e2121",
+      statusBarColor: statusBarColor || "#1e2121",
       headerTextColor: headerTextColor || "white",
       hideAndroidBottomNavigationBar: true,
       hideIOSSafeAreaBottom: true,

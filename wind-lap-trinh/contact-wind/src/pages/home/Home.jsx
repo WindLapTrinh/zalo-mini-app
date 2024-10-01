@@ -10,77 +10,32 @@ import {
   Text,
   Input,
 } from "zmp-ui";
-import "../../css/detailHome.css";
-import CategoryProduct from "@/pages/home/CategoryProduct";
-import ProductList from "@/pages/home/ProductList";
-import Slider from "@/pages/home/Slider";
-import ServiceStore from "@/pages/home/ServiceStore";
-import Introduce from "@/pages/home/Introduce";
-import HeaderListProduct from "@/pages/home/HeaderListProduct";
+import Introduce from "./Introduce";
+import CategoryProduct from "./CategoryProduct";
+import InformationPage from "./InfomationPage";
+import NewForm from "./NewForm";
+import StoriesForYou from "./StoriesForYou";
+import ThankPage from "./ThankPage";
 import CustomBottomNavigation from "@/pages/shared/components/CustomBottomNavigation";
-import Popup from "@/pages/shared/pages/Popup";
 import CustomHeader from "../shared/pages/CustomHeader";
-
-const products = [
-  { id: 1, name: "Technolory AI", image: "/images/category/icon-ai.png" },
-  { id: 2, name: "Mini App", image: "/images/category/icon-mini-app.png" },
-  { id: 3, name: "Desgin Web", image: "/images/category/icon-website.png" },
-  { id: 4, name: "Technolory AI", image: "/images/category/icon-ai.png" },
-  { id: 5, name: "Mini App", image: "/images/category/icon-mini-app.png" },
-  { id: 6, name: "Desgin Web", image: "/images/category/icon-website.png" },
-
-];
-
-const gotoCategory = (id) => {
-  console.log("Chuyển đến danh mục:", id);
-};
 
 const Home = (props) => {
   const navigate = useNavigate();
 
-  const handleServiceStoreClick = (id) => {
-    console.log("Category clicked:", id);
-    navigate(`/categoryByProduct`);
-  };
-
-  const [showPopup, setShowPopup] = useState(false);
-
-  useEffect(() => {
-    const popupShown = localStorage.getItem("popupShown");
-    if (!popupShown) {
-      setShowPopup(true);
-      localStorage.setItem("popupShown", "true");
-    }
-  }, []);
-
-  const handleClosePopup = () => {
-    setShowPopup(false);
-  };
-
   return (
     <Box>
-      <CustomHeader title={"Wind Lập Trình"} subtitle={"Đội ngũ lập trình GenZ"} imageUrl={"./images/logo/wind-app.png"} />
+      <CustomHeader
+        title={"Wind Lập Trình"}
+        subtitle={"Đội ngũ lập trình GenZ"}
+        imageUrl={"./images/logo/wind-app.png"}
+      />
       <Page className="home">
-        <Box className="content">
-          <Popup show={showPopup} onClose={handleClosePopup} />
-          <Box className="header-home">
-            <Introduce />
-            <ServiceStore
-              products={products}
-              onServiceStoreClick={handleServiceStoreClick}
-            />
-            <Slider />
-            <CategoryProduct />
-          </Box>
-
-          {/* Product list and bottom navigation */}
-          <Box>
-            <HeaderListProduct />
-            <ProductList />
-          </Box>
-        </Box>
-
-        {/* Custom bottom navigation */}
+        <Introduce />
+        <CategoryProduct />
+        <InformationPage />
+        <NewForm />
+        <StoriesForYou />
+        <ThankPage />
         <CustomBottomNavigation />
       </Page>
     </Box>

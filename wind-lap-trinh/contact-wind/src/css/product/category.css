@@ -1,0 +1,46 @@
+.by-product {
+  background: #ffffff;
+}
+
+.category-by {
+  background: #fff !important;
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+}
+
+.slider-by {
+  display: flex;
+}
+
+.tabs-wrapper {
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.horizontal-tabs .zmp-tab {
+  display: inline-block;
+  padding: 10px;
+}
+
+.tabs-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.tabs-wrapper::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.tabs-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.zaui-tabs-tabbar-item.zaui-tabs-tabbar-item-active {
+  color: #028090 !important;
+}
+.zaui-tabs-tabbar-active-line {
+  background-color: #028090 !important;
+}
+.tabs-wrapper {
+  white-space: unset !important;
+}

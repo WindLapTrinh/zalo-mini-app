@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Box, Text } from "zmp-ui";
 import { IoCartSharp } from "react-icons/io5";
 import "../../css/detailhome/swiper/swiper-bundle.min.css";
+
 const categories = [
   {
     id: 1,
@@ -30,7 +31,7 @@ const categories = [
 ];
 
 const CategoryProduct = () => {
-  const [timeRemaining, setTimeRemaining] = useState(3600); // initial time in seconds (1 hour)
+  const [timeRemaining, setTimeRemaining] = useState(3600);
 
   useEffect(() => {
     const interval = setInterval(() => {

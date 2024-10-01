@@ -16,6 +16,9 @@ body{
 .zaui-input-affix-wrapper:hover, .zaui-input-affix-wrapper:focus, .zaui-input-affix-wrapper:focus-visible {
   border-color: unset;
 }
+.zaui-header::after{
+  height: unset;
+}
 
 .size-list {
   max-height: 300px; /* Hoặc chiều cao bạn muốn */

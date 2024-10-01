@@ -1,0 +1,127 @@
+.cart-page{
+  background-color: white;
+}
+.box-cart-page{
+  padding: 10px;
+}
+.index-cart-item {
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box-shadow */
+  background-color: white;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-item {
+  display: flex;
+  align-items: start;
+  flex: 1;
+}
+
+.cart-item-image {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  margin-right: 16px;
+}
+
+.cart-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+.cart-item-size{
+  color: #808080;
+  font-size: 14px;
+  font-weight: 400;
+}
+.cart-item-price {
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: black;
+  font-weight: 500;
+}
+
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #e02a1a;
+  font-weight: bold;
+  position: absolute;
+  bottom: 12px; /* Adjust distance from bottom */
+  right: 12px;  /* Adjust distance from right */
+}
+
+.quantity-btn {
+  background-color: #ffffff;
+  border: 1px solid #2e2d2d;
+  color: black;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.quantity-btn:hover {
+  background-color: #d5d5d5;
+  border: 1px solid #d5d5d5;
+  color: black;
+}
+
+.quantity-input {
+  width: 43px;
+  text-align: center;
+  border: 1px solid #2e2d2d;
+  border-radius: 4px;
+  margin: 0 5px;
+  font-size: 16px;
+  height: 32px;
+}
+
+.delete-item-cart {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  cursor: pointer;
+}
+.icon-delete-item{
+  font-size: 16px;
+}
+
+.delete-item-cart .zi-close {
+  font-size: 20px; /* Adjust size as needed */
+}
+
+.header-cart-product {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-header-cart {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.sum-cart-page {
+  margin-bottom: 30px;
+}

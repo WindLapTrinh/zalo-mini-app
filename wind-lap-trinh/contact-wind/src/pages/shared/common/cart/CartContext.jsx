@@ -22,7 +22,7 @@ export const CartProvider = ({ children }) => {
       if (existingItem) {
         return prevCart.map((cartItem) =>
           cartItem.id === item.id
-            ? { ...cartItem, quantity: cartItem.quantity + item.quantity }
+            ? { ...cartItem, quantity: cartItem.quantity + item.quantity}
             : cartItem
         );
       }

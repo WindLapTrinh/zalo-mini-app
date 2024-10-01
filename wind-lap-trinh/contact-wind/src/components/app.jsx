@@ -5,17 +5,16 @@ import { App, ZMPRouter, AnimationRoutes, SnackbarProvider } from "zmp-ui";
 import { RecoilRoot } from "recoil";
 
 import Home from "../pages/home/Home.jsx";
-import CategoryByProduct from "../pages/category/CategoryByProduct.jsx";
-import ProductDetail from "../pages/category/ProductDetail.jsx";
-import NotificationPage from "../pages/notify/NotificationPage.jsx";
-import UserPage from "../pages/user/UserPage.jsx";
-import PurchaseHistory from "../pages/cart/PurchaseHistory.jsx";
-import HomeCart from "../pages/cart/HomeCart.jsx";
-import UpdatePage from "../pages/shared/pages/Update.jsx";
-import Language from "../pages/shared/pages/Language.jsx";
-import AddressPage from "../pages/cart/AddressCart.jsx";
-import ListAddress from "../pages/cart/ListAddress.jsx";
-import HomePayment from "../pages/payment/HomePayment.jsx";
+import Product from "../pages/product/Home.jsx";
+import Cart from "../pages/cart/Home.jsx";
+import Category from "../pages/product/Category.jsx";
+import HomeNewForm from "../pages/newform/Home.jsx";
+import Shop from "../pages/shop/Home.jsx";
+import Favorites from "../pages/favorites/Home.jsx";
+import Profile from "../pages/profile/Home.jsx";
+import Inbox from "../pages/profile/Inbox.jsx";
+import MemberRewards from "../pages/profile/MemberRewards.jsx";
+
 import { CartProvider } from "../pages/shared/common/cart/CartContext";
 import { PaymentProvider } from "../pages/shared/common/payment/PaymentContext";
 import { AddressProvider } from "../pages/shared/common/cart/AddressContext.jsx";
@@ -33,16 +32,16 @@ const MyApp = () => {
                   <ZMPRouter>
                     <AnimationRoutes>
                       <Route path="/" element={<Home setTasks={setTasks} tasks={tasks} />} />
-                      <Route path="/categoryByProduct" element={<CategoryByProduct setTasks={setTasks} tasks={tasks} />} />
-                      <Route path="/detailProduct" element={<ProductDetail setTasks={setTasks} tasks={tasks} />} />
-                      <Route path="/notificationPage" element={<NotificationPage setTasks={setTasks} tasks={tasks} />} />
-                      <Route path="/contactUser" element={<UserPage setTasks={setTasks} tasks={tasks} />} />
-                      <Route path="/purchaseHistory" element={<PurchaseHistory setTasks={setTasks} tasks={tasks} />} />
-                      <Route path="/update" element={<UpdatePage setTasks={setTasks} tasks={tasks} />} />
-                      <Route path="/addressCart" element={<AddressPage setTasks={setTasks} tasks={tasks} />} />
-                      <Route path="/homeCart" element={<HomeCart setTasks={setTasks} tasks={tasks} />} />
-                      <Route path="/homePayment" element={<HomePayment setTasks={setTasks} tasks={tasks} />} />
-                      <Route path="/listAddress" element={<ListAddress setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/product" element={<Product setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/category" element={<Category setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/cart" element={<Cart setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/home/newform" element={<HomeNewForm setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/shop" element={<Shop setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/favorites" element={<Favorites setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/profile" element={<Profile setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/inbox" element={<Inbox setTasks={setTasks} tasks={tasks} />} />
+                      <Route path="/memberRewards" element={<MemberRewards setTasks={setTasks} tasks={tasks} />} />
+
                     </AnimationRoutes>
                   </ZMPRouter>
                 </SnackbarProvider>

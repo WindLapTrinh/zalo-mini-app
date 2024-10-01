@@ -1,9 +1,55 @@
+/* setting zalo  */
+body{
+  background-color: #ffffff;
+}
+.zaui-btn-tertiary.zaui-btn-neutral{
+  color: #ffffff !important;
+}
+.zaui-sheet-content.zaui-sheet-content-hug-content{
+  height: 387px;
+  overflow-y: auto;
+}
+.zaui-input{
+  height: 33px;
+  border-radius: 8px;
+}
+.zaui-input-affix-wrapper:hover, .zaui-input-affix-wrapper:focus, .zaui-input-affix-wrapper:focus-visible {
+  border-color: unset;
+}
+.zaui-header::after{
+  height: unset;
+}
+
+.size-list {
+  max-height: 300px; /* Hoặc chiều cao bạn muốn */
+  overflow-y: auto; /* Cho phép cuộn dọc */
+}
+
+/* end setting  */
+/* home  */
+.home{
+  background-color: #ffffff;
+  margin-bottom: 30px;
+}
+.icon-active{
+  color: #0f0f0f !important;
+}
+.check-wind{
+  color: #148ed5 !important;
+  font-size: 18px !important;
+}
+.img-ai{
+  width: 50px;
+  border-radius: 50px;
+}
+/* end home  */
+
 /* user page  */
 body {
   padding-top: calc(var(--zaui-safe-area-inset-top, 0px) + 44px);
 }
 .page-custom-header {
-  background-color: #028090 !important;
+  background-color: black !important;
   color: white;
 }
 .custom-header-account {
@@ -16,13 +62,3 @@ body {
     border-radius: 30px;
 }
 /* end user page */
-
-/* home  */
-.check-wind{
-  color: #028090;
-}
-.img-ai{
-  width: 50px;
-  border-radius: 50px;
-}
-/* end home  */

@@ -1,0 +1,101 @@
+/* detailHome.css */
+.grid {
+    display: grid;
+    gap: 16px;
+  }
+  
+.grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+.list-product{
+    margin-bottom: 50px !important;
+    background: #ffffff;
+} 
+.product-index{
+    padding: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box-shadow */
+} 
+.product-name-item{
+   margin-top: 5px;
+}
+.price-item{
+    float: left;
+    color: #028090;
+  }
+ .product-icon{
+    float: right;
+    line-height: unset;
+    font-size: 20px;
+ }
+ .descript-product{
+    padding:10px;
+ }
+ .icon-list-product{
+    float: left;
+    margin-right: 5px;
+    color: #ff0220;
+    font-weight: 500;
+    font-size: 20px;
+ }
+ .title-category-product{
+    font-weight: 500;
+    font-size: 18px;
+ }
+
+.all-product{
+    font-weight: 500;
+    color: #028090;
+    font-size: 14px;
+}
+.sheet-header-product{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cccc;
+}
+
+ .sheet-img-product{
+    width: 140px;
+    float: left;
+    margin-right: 8px;
+    border-radius: 8px;
+ }
+ .sheet-title-product{
+    font-weight: 500;
+ }
+ .sheet-price-product{
+    color: #028090;
+    font-weight: 500;
+ }
+ .sheet-footer-product{
+    padding: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+ }
+ .btn-sheet-product{
+    background-color: #028090 !important;
+    padding: 0px !important;
+    min-width: 40px !important;
+    height: 40px !important;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+ }
+ .btn-sheet-increased{
+    background-color: #028090 !important;
+    padding: 0px !important;
+    min-width: 40px !important;
+    height: 40px !important;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+.btn-sheet-payment{
+    background-color: #028090 !important;
+    font-weight: 500;
+}
+.btn-sheet-cart{
+    background-color: #ffffff !important;
+    color: #028090;
+    font-weight: 500;
+    border: 1px solid;
+}

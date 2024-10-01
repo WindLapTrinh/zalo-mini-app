@@ -1,14 +1,14 @@
-.page-list-address{
-    padding: 10px;
+.page-list-address {
+  padding: 10px;
 }
-.title-list-address{
-    font-size: 16px;
-    font-weight: 500;
-    color: #00b815;
-    margin-bottom: 10px;
+.title-list-address {
+  font-size: 16px;
+  font-weight: 500;
+  color: #00b815;
+  margin-bottom: 10px;
 }
-.item-list-address{
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+.item-list-address {
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box-shadow */
   background-color: #fff;
   border-radius: 8px;
@@ -20,21 +20,22 @@
   height: 78px;
 }
 .checkbox-list-address {
-    margin-right: 10px;
-  }
-  
-  .address-details {
-    flex-grow: 1;
-  }
-.header-list-address{
-    font-weight: 500;
-    color: #00b815;
-    font-size: 14px;
+  margin-right: 10px;
 }
-.footer-list-address{
-    color: #333;
-    font-size: 13px;
+
+.address-details {
+  flex-grow: 1;
+}
+.header-list-address {
+  font-weight: 500;
+  color: #00b815;
+  font-size: 14px;
+}
+.footer-list-address {
+  color: #333;
+  font-size: 13px;
 }
 .zaui-checkbox-checked .zaui-checkbox-inner {
   background-color: #11d320;
+
 }

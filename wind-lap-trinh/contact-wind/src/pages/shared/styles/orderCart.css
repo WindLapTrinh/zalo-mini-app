@@ -1,0 +1,26 @@
+
+.image-order-cart{
+    height: 500px;
+    object-fit: cover;
+}
+.image-media-cart{
+    height: auto;
+}
+.notify-order-cart{
+     padding: 0px 10px;
+}
+.text-notify-order{
+    color: #696f6a;
+    font-size: 14px;
+}
+.btn-order-cart{
+    display: flex;
+    float: right;
+    background-color: #696f6a;
+    color: white;
+    margin-top: 10px;
+}
+.btn-order-cart:hover{
+    background-color: black;
+    transition: 0.5s;
+}
