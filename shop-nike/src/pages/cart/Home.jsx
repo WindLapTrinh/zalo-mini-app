@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { Box, Text, Button, Input, Icon } from "zmp-ui";
-import SetTitleHeader from "@/pages/shared/hooks/setTitleHeader";
 import ShippingInfo from "./ShippingInfo";
 import InfomationPayment from "./InfomationPayment";
 import OrderProduct from "./OrderProduct";

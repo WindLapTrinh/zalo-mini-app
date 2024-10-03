@@ -3,15 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { Box, Text, Checkbox, Button, Icon } from "zmp-ui";
 import { useAddress } from "../shared/common/cart/AddressContext";
 import AddressCart from "./AddressCart.jsx";
-import SetTitleHeader from "@/pages/shared/hooks/setTitleHeader";
 import "../../css/cart/listAddress.css";
 
 const ListAddress = () => {
   const navigate = useNavigate();
   const { address, setAddress } = useAddress();
-  SetTitleHeader({
-    title: "Danh sách địa chỉ",
-  });
   useEffect(() => {
     // Retrieve addresses from local storage when the component mounts
     const storedAddresses = JSON.parse(localStorage.getItem("addresses"));

@@ -1,0 +1,26 @@
+.box-event-profile{
+    padding-bottom: 80px;
+}
+.event-index{
+    margin-top: 10px;    
+}
+.box-list-event{
+    display: grid;
+}
+.info-event-profile{
+    padding-left:10px;
+}
+.event-title-item{
+    font-size: 13px;
+    font-weight: 500;
+}
+.event-name-item{
+    font-size: 12px;
+    font-weight: 500;
+    color: #909090;
+}
+.event-des-item{
+    font-size: 12px;
+    font-weight: 500;
+    color: #909090;
+}

@@ -1,7 +1,6 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Box, Text, Button } from "zmp-ui";
-import SetTitleHeader from "@/pages/shared/hooks/setTitleHeader";
+import { Box, Text, Button, Header } from "zmp-ui";
 import CustomBottomNavigation from "../shared/components/CustomBottomNavigation";
 import CustomHeader from "../shared/pages/CustomHeader";
 import "../../css/notify/notifyPage.css";
@@ -27,7 +26,7 @@ const NotificationPage = () => {
 
   return (
     <Box>
-      <CustomHeader title={"Thông báo"} />
+      <Header title="Thông báo"  showBackIcon={false}/>
       <Box className="notification-page">
         <Box className="box-custom-header"></Box>
         <Box className="notification-list">

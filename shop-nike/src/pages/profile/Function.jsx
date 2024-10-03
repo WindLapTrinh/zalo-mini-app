@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation, useNavigate } from "react-router-dom";
 import { Box, Text } from 'zmp-ui';
 import { MdShoppingCart, MdVpnKey, MdEvent, MdSettings } from 'react-icons/md'; 
 import { BsBoxSeam } from "react-icons/bs";
@@ -15,6 +16,10 @@ const functions = [
 ];
 
 const Functions = () => {
+  const navigate = useNavigate();
+  const handleOnClickFunc = () => {
+    navigate("/event");
+  }  
   return (
     <Box className="profile-functions">
       {functions.map((func, index) => (
@@ -22,6 +27,7 @@ const Functions = () => {
           key={func.name}
           className={`profile-func-item ${index !== functions.length - 1 ? 'border-right' : ''}`}
           textAlign="center"
+          onClick={() => handleOnClickFunc()}
         >
           <Box className="profile-func-icon">{func.icon}</Box>
           <Text className="profile-func-name">{func.name}</Text>
