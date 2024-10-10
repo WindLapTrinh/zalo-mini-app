@@ -26,9 +26,7 @@ body{
   max-height: 300px; /* Hoặc chiều cao bạn muốn */
   overflow-y: auto; /* Cho phép cuộn dọc */
 }
-.header-hidden{
-  display: none !important;
-}
+
 /* end setting  */
 /* home  */
 .home{
