@@ -1,0 +1,34 @@
+.detail-survey{
+    position: relative;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+}
+.header-survey{
+ padding-top: 0px !important;
+}
+.title-survey{
+    font-size: 16px;
+    color: #30c840;
+    font-weight: 500;
+}
+.btn-survey{
+    background-color: #8861bb;
+    color: white;
+    float: right;
+}
+.bnt-survey:hover{
+    background-color: #30c840;
+    transition: 0.5s;
+}
+.zaui-checkbox-checked .zaui-checkbox-inner {
+    background-color: #11d320;
+  }
+/* alertStyles.css */
+.swal2-custom-toast {
+    background-color: #3085d6 !important; /* Màu nền cho toast */
+    color: white !important; /* Màu chữ */
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 8px;
+  }

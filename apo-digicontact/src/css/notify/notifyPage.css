@@ -1,0 +1,34 @@
+body{
+    background-color: white;
+}
+.page-notify {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .notify-content {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .notify-image {
+    width: 340px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .notify-message {
+    color: #333;
+    text-align: left;
+  }
+  .btn-home-notify{
+    background-color: #8861bb;
+    margin-top: 10px;
+  }
+  .btn-home-notify:hover{
+    background-color: #bf9cec;
+    transition: 0.5s;
+  }

@@ -1,0 +1,37 @@
+.page-home{
+    background-color: white;
+}
+.header-home{
+    background: linear-gradient(to bottom, rgb(136 97 187), rgb(136 97 187));
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box-shadow */  
+    padding-bottom: 10px;
+}
+.body-home{
+    margin-bottom: 50px !important;
+
+}
+
+/* ke toan  */
+.accounting-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.red-box-notice {
+    position: absolute;
+    top: -8px;
+    right: -29px;
+    background-color: red;
+    color: white;
+    border-radius: 80%;
+    padding: 0px 8px;
+    font-size: 12px;
+}
+.img-login {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top: -2px;
+  }
