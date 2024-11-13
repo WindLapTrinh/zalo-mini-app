@@ -51,7 +51,7 @@ const Login = () => {
     <div>
       {!isLoggedIn && (
         <Page className="page-login">
-          <CustomHeader title={"HoangAnh DigiContact"} showBackIcon={false}/>
+          <CustomHeader title={"APO English"} showBackIcon={false}/>
           <Box className="header-login">
             <Introduce />
             <SliderLogin />

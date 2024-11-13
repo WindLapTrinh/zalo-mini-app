@@ -31,7 +31,7 @@ const ListStudents = ({ phoneNumber, onSelectStudent }) => {
   };
 
   return (
-    <>
+    <Box>
       {!isLoading && students.length > 0 && (
         <Box className="header-student">
           <BsPatchCheckFill className="icon-student-check" />
@@ -86,7 +86,7 @@ const ListStudents = ({ phoneNumber, onSelectStudent }) => {
           ))}
         </List>
       )}
-    </>
+    </Box>
   );
 };
 
