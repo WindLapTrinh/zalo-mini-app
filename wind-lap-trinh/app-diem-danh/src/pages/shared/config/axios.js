@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosClient = axios.create({
-  baseURL: "https://hoanganh2.ileader.vn/",
+  baseURL: "http://demo-x.ileader.vn/",
 });
 
 export default axiosClient;

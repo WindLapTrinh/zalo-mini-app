@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url('/images/login/banner-1.jpg'); /* Replace with the actual image path */
+  background-image: url('/images/banner/ileader-6.png'); /* Replace with the actual image path */
   background-size: cover;
   background-position: left;
 }
@@ -24,9 +24,12 @@
 .login-button {
   width: 100%;
   color: white;
-  background-color: #17B698;
+  background-color: #aa50ca;
 }
 .login-button:hover{
-  background-color: #67e1cb;
+  background-color: #eaafff;
   transition: 0.5s;
+}
+.error-text{
+  color: rgb(247, 10, 10);
 }
