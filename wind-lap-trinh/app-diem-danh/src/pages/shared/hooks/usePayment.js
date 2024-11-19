@@ -1,17 +1,37 @@
-import { useCallback } from 'react';
-import {axiosClient} from '../config/axios'; 
+import { useCallback } from "react";
+import axiosClient from "../config/axios"; 
+import { Payment } from "zmp-sdk";
 
 const usePayment = () => {
-  const createOrder = useCallback(async ({dateOrder, money, payId, id, orderId, desc }) => {
-    try {
-      await Payment.createOrder({
-        desc: `Thanh toán - đơn hàng ngày ${dateOrder} - còn nợ ${formatCurrency(
-          money
-        )}`,
-        item: [{ id: payId, amount: money }],
+  const formatCurrency = (value) => {
+    if (value === undefined || value === null) return "";
+    return value.toLocaleString("vi-VN", {
+      style: "currency",
+      currency: "VND",
+    });
+  };
+
+  const handlePayment = useCallback(async (selectedReg) => {
+    if (selectedReg) {
+      const parsedJsonContent = (selectedReg || "{}");
+      const payId = parsedJsonContent.Guid;
+      const remainingAmount = parsedJsonContent.Remaining;
+      const dateReg = parsedJsonContent.RegisterDate;
+      const studentName = parsedJsonContent.StudentName;
+      const id = parsedJsonContent.Id; // Assuming `id` is part of `parsedJsonContent`
+      const orderId = parsedJsonContent.OrderId; // Assuming `orderId` is part of `parsedJsonContent`
+      const desc = `Học viên ${studentName} thanh toán - phiếu đăng ký ngày ${dateReg} - còn nợ ${formatCurrency(remainingAmount)}`;
+
+      console.log("id thanh toan", payId);
+      console.log("so tien thanh toan", remainingAmount);
+
+      Payment.createOrder({
+        desc,
+        item: [{ id: payId, amount: remainingAmount }],
         id: payId,
-        amount: money,
+        amount: remainingAmount,
         extradata: {
+          storeName: studentName,
           storeId: id,
           orderGroupId: orderId,
           myTransactionId: "2388317336306541214",
@@ -23,7 +43,7 @@ const usePayment = () => {
 
           try {
             const res = await axiosClient.post(
-              `RegisterForm/MiniAppPay?&guid=${id}&money=${money}`
+              `RegisterForm/MiniAppPay?&guid=${payId}&money=${remainingAmount}`
             );
             console.log("dữ liệu success", res);
           } catch (error) {
@@ -34,12 +54,12 @@ const usePayment = () => {
           console.log(err);
         },
       });
-    } catch (error) {
-      console.error('Error creating order:', error);
     }
+
+    console.log("Click");
   }, []);
 
-  return { createOrder };
+  return { handlePayment };
 };
 
 export default usePayment;

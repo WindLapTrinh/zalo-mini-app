@@ -14,8 +14,8 @@ const usePhoneNumber = () => {
       const accessToken = await getAccessToken();
       const { token: phoneNumberToken } = await getPhoneNumber();
       const endpoint = 'https://graph.zalo.me/v2.0/me/info';
-      const secretKey = 'UOUC60ORNLMLkNW9wUaL';
-
+      const secretKey = 'SC7C3EQocWcEMVUXrP2d';
+ 
       if (accessToken && phoneNumberToken) {
         const response = await axios.get(endpoint, {
           headers: {

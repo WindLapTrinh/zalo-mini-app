@@ -1,52 +1,32 @@
-import React, { useEffect, useRef } from "react";
-import SwiperCore, { EffectCoverflow, Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.min.css";
-import "swiper/swiper.min.css";
-import bannerOne from "/images/banner/banner-one.jpg";
-import bannerTwo from "/images/banner/banner-two.jpg";
-import banner3 from "/images/banner/banner-3.jpg";
-import "../../css/detailhome/slider.css";
+import React from "react";
+import {Box, Swiper} from "zmp-ui";
 
-SwiperCore.use([EffectCoverflow, Pagination]);
+import banner1 from "/images/banner/ileader_1.jpg";
+import banner2 from "/images/banner/ileader_2.png";
+import banner5 from "/images/banner/ileader-5.png";
 
-const slide_img = [bannerOne, bannerTwo, banner3 ];
 
-const Slider = () => {
-  const swiperRef = useRef(null);
+import "../../css/login/slider.css";
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (swiperRef.current) {
-        const swiper = swiperRef.current.swiper;
-        swiper.slideNext(); 
-      }
-    }, 3000); 
 
-    return () => clearInterval(interval); 
-  }, []);
+const slide_img = [banner1, banner2, banner5];
+
+const SliderLogin = () => {
 
   return (
-    <div className="main-swiper">
+    <Box className="main-swiper">
       <Swiper
-        effect={"slide"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={"auto"}
-        pagination={true}
-        className="mySwiper"
-        loop={true}
-        initialSlide={1}
-        ref={swiperRef}
+        autoplay = {true}
+        duration = {3000}
       >
         {slide_img.map((img, i) => (
-          <SwiperSlide key={i}>
+          <Swiper.Slide key={i}>
             <img className="image-slider" src={img} alt="" />
-          </SwiperSlide>
+          </Swiper.Slide>
         ))}
       </Swiper>
-    </div>
+    </Box>
   );
 };
 
-export default Slider;
+export default SliderLogin;

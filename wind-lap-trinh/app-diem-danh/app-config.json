@@ -1,18 +1,25 @@
 {
   "app": {
-    "title": "Wind Lập Trình",
-    "headerTitle": "Wind Lập Trình",
-    "headerColor": "#00346b",
+    "title": "HoangAnh DigiContact",
+    "headerColor": "",
     "textColor": "white",
-    "statusBarColor": "#00346b",
-    "leftButton": "back",
+    "statusBarColor": "#8861bb",
+    "leftButton": "none",
     "statusBar": "normal",
-    "actionBarHidden": false,
+    "selfControlLoading": false,
     "hideAndroidBottomNavigationBar": false,
-    "hideIOSSafeAreaBottom": false
+    "hideIOSSafeAreaBottom": false,
+    "actionBarHidden": true,
+    "textAlign": "left"
   },
   "debug": false,
   "listCSS": [],
   "listSyncJS": [],
-  "listAsyncJS": []
+  "listAsyncJS": [],
+  "template": {
+    "primaryColor": "#028090",
+    "prefixCurrencySymbol": false,
+    "currencySymbol": "đ",
+    "headerLogo": ""
+  }
 }

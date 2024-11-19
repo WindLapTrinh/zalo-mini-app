@@ -1,85 +1,53 @@
-import React, { useState,useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import {
-  BottomNavigation,
-  Box,
-  Icon,
-  Page,
-  Sheet,
-  Swiper,
-  Text,
-  Input,
-} from "zmp-ui";
-import "../../css/detailHome.css";
-import CategoryProduct from "@/pages/home/CategoryProduct";
-import Slider from "@/pages/home/Slider";
-import ServiceStore from "@/pages/home/ServiceStore";
-import Introduce from "@/pages/home/Introduce";
-import HeaderListProduct from "./HeaderListProduct";
+import React, { useRef } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
+import { Box, Page } from "zmp-ui";
+import Introduce from "./Introduce.jsx";
+import Slider from "./Slider.jsx";
+import Feature from "./Feature.jsx";
+import Infomation from "./Infomation.jsx";
+import CreateShortcuts from "./CreateShortcuts.jsx";
+import BottomNavigationComponent from "../shared/components/BottomNavigationComponent";
+import {openChatScreen} from "../shared/utils/openChatScreen.js";
+import useUser from "../shared/hooks/useUser.js"
+import CustomHeader from "../shared/pages/CustomHeader.jsx";
+import "../../css/home/home.css";
 
-import CustomBottomNavigation from "@/components/layout/CustomBottomNavigation";
-import SetTitleHeader from "@/pages/shared/hooks/setTitleHeader";
-import Popup from "@/pages/shared/pages/Popup";
-
-const products = [
-  { id: 1, name: "Thịt gà", image: "/images/category/chiken.jpg" },
-  { id: 2, name: "Snacks", image: "/images/category/snacks.jpg" },
-  { id: 3, name: "Gia vị", image: "/images/category/spice.jpg" },
-  { id: 4, name: "Bánh kẹo", image: "/images/category/hamburger.jpg" },
-  { id: 5, name: "Gạo", image: "/images/category/rice.jpg" },
-  { id: 6, name: "Bia", image: "/images/category/beer.jpg" },
-  { id: 7, name: "Dụng cụ", image: "/images/category/cosmetics.jpg"},
-  { id: 8, name: "Rau củ", image: "/images/category/vegetables.jpg"},
-  { id: 9, name: "Hải sản", image: "/images/category/seafood.jpg"},
-
-];
-
-const gotoCategory = (id) => {
-  console.log("Chuyển đến danh mục:", id);
-};
-
-const Home = (props) => {
-  SetTitleHeader({
-    title: "Wind Lập Trình",
-  });
+const Home = () => {
+  const location = useLocation();
   const navigate = useNavigate();
+  const { studentName, studentGuid, phoneNumber } = location.state || {};
+  console.log("Name home", studentName);
+  console.log("Guid Students",studentGuid);
+   // Sử dụng useUser để lấy thông tin người dùng
+   const { userInfo, loading, error } = useUser();
+   console.log("Name", userInfo && userInfo.name || "");
 
-  const handleServiceStoreClick = (id) => {
-    console.log("Category clicked:", id);
-    navigate(`/categoryByProduct`);
+   const handleBackClick = () => {
+    if (studentName) {
+      navigate("/students", {state: {phoneNumber}});
+    } else {
+      navigate(-1);
+    }
   };
 
-  //popup
-  const [showPopup, setShowPopup] = useState(false);
-
-  useEffect(() => {
-    // Kiểm tra nếu popup đã được hiển thị trước đó
-    const popupShown = localStorage.getItem('popupShown');
-    if (!popupShown) {
-      setShowPopup(true);
-      // Đánh dấu popup đã được hiển thị
-      localStorage.setItem('popupShown', 'true');
-    }
-  }, []);
-  const handleClosePopup = () => {
-    setShowPopup(false);
-  }
   return (
-    <Page className="home">
- <Popup show={showPopup} onClose={handleClosePopup} />
+    <Page className="page-home">
+      <CustomHeader title={studentName} showBackIcon={true} onBackClick={handleBackClick}/>
       <Box className="header-home">
-        <Introduce/>
-        <ServiceStore
-          products={products}
-          onServiceStoreClick={handleServiceStoreClick}
-        />
+        <Introduce />
         <Slider />
-        <CategoryProduct/>
+        <Feature />
       </Box>
-      <Box>
-      <HeaderListProduct/>
+      <Box className="body-home">
+        <CreateShortcuts />
+        <Infomation />
       </Box>
-      <CustomBottomNavigation />
+      <BottomNavigationComponent
+        studentGuid={studentGuid}
+        studentName={studentName}
+        phoneNumber={phoneNumber}
+        openChatScreen={openChatScreen}
+      />
     </Page>
   );
 };

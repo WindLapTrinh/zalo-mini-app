@@ -4,14 +4,14 @@ import { configAppView } from "zmp-sdk/apis";
 const SetTitleHeader = ({ title, headerColor, statusBarColor, headerTextColor }) => {
   useEffect(() => {
     configAppView({
-      headerColor: headerColor || "#00346b",
-      statusBarColor: statusBarColor || "#00346b",
+      headerColor: headerColor || "#8861bb",
+      statusBarColor: statusBarColor || "#8861bb",
       headerTextColor: headerTextColor || "white",
       hideAndroidBottomNavigationBar: true,
       hideIOSSafeAreaBottom: true,
       actionBar: {
-        title: title || "Wind Lập Trình",
-        leftButton: "back",
+        title: title || "iLeader Digicontact",
+        // leftButton: "back",
       },
       success: (res) => {
         console.log("Gọi thành công");

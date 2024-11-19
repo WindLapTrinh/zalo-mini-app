@@ -1,0 +1,98 @@
+.page-contact{
+    background-color: white;
+    height: auto;
+    overflow: hidden;
+}
+.header-contact{
+  margin-top: 44px;
+}
+.image-introduce-contact{
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+.icon-contact{
+    color: #8861bb !important;
+    font-size: 16px !important;
+    margin-right: 5px;
+    display: unset;
+}
+.item-overview{
+    display: inline-block;
+}
+.info-item-overview{
+    display: inline-block;
+    font-weight: 500;
+}
+.introduce-contact{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 37px 10px 0px 10px;
+}
+.fouder-contact{
+    padding: 5px 10px 0px 10px;
+}
+.name-application{
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 5px;
+    color: #30c840;
+}
+.content-desc-app{
+    font-size: 14px;
+    font-weight: 500;
+}
+.fouder-contact, .free-ship-contact {
+    display: flex;
+    align-items: center; /* Căn chỉnh các phần tử bên trong div theo chiều dọc */
+}
+.mini-app-ileader{
+    display: flex;
+    align-items: center; /* Căn chỉnh các phần tử bên trong div theo chiều dọc */
+
+}
+  
+  .fouder-contact span, .free-ship-contact span {
+    color: #30c840;
+  }
+  
+  .fouder-contact svg, .free-ship-contact svg {
+    font-size: 14px; /* Kích thước icon */
+    color: #8861bb;
+  }
+.image-fouder-contact{
+  width: 51px;
+  height: auto;
+  display: unset !important;
+  margin-right: 5px;
+}
+.desc-mini-app{
+    padding: 0px 10px;
+}
+.detail-overview-app{
+    padding: 5px 10px 0px 10px;
+}
+.event-contact{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+.title-contact{
+    font-size: 15px;
+     font-weight: 500;
+     padding: 0px 10px;
+}
+.btn-contact,
+.btn-school{
+    background-color: #8861bb;
+    color: #ffffff;
+    width: 170px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+.btn-contact:hover,
+.btn-school:hover{
+    background-color: #cca5ff;
+    transition: 0.3s;
+}

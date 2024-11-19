@@ -1,0 +1,17 @@
+.page-description-payment{
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 10px 0px 10px;
+}
+.img-description-payment{
+    width: 37px;
+    height: 37px;
+    margin-right: 5px;
+    border-radius: 50px;
+}
+.content-description-payment{
+    font-weight: 500;
+    color: #211135;
+    font-style: oblique;
+}
