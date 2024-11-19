@@ -1,0 +1,110 @@
+/* detailHome.css */
+.grid {
+    display: grid;
+    gap: 16px;
+  }
+  
+.grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+.list-product{
+    margin-bottom: 50px !important;
+    padding:10px;
+    background: #ffffff;
+    margin-bottom: 60px;
+} 
+.product-index{
+    padding: 10px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box-shadow */
+    border-radius: 10px;
+} 
+.product-name-item{
+   margin-top: 5px;
+}
+.price-item{
+    float: left;
+    color: #00346b;
+  }
+ .product-icon{
+    float: right;
+    line-height: unset;
+    color: #00346b;
+    font-size: 20px;
+ }
+ .descript-product{
+    padding:10px;
+ }
+ .icon-list-product{
+    float: left;
+    margin-right: 5px;
+    color: #ff0220;
+    font-weight: 500;
+    font-size: 20px;
+ }
+ .title-category-product{
+    font-weight: 500;
+    font-size: 18px;
+ }
+
+.all-product{
+    font-weight: 500;
+    color: #00346b;
+    font-size: 14px;
+}
+.sheet-header-product{
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #cccc;
+}
+
+ .sheet-img-product{
+    width: 140px;
+    float: left;
+    margin-right: 8px;
+    border-radius: 8px;
+ }
+ .sheet-title-product{
+    font-weight: 500;
+ }
+ .sheet-price-product{
+    color: #00346b;
+    font-weight: 500;
+ }
+ .sheet-footer-product{
+    padding: 10px;
+    border-radius: 50px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+ }
+ .btn-sheet-product{
+    background-color: #00346b !important;
+    padding: 0px !important;
+    min-width: 40px !important;
+    height: 40px !important;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+ }
+ .btn-sheet-increased{
+    background-color: #00346b !important;
+    padding: 0px !important;
+    min-width: 40px !important;
+    height: 40px !important;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+.btn-sheet-payment{
+    background-color: #00346b !important;
+    font-weight: 500;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 4px 5px 8px rgba(0, 0, 0, 0.2);
+}
+.btn-sheet-cart{
+    background-color: #ffffff !important;
+    color: #00346b;
+    font-weight: 500;
+    border: 1px solid;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 4px 5px 8px rgba(0, 0, 0, 0.2);
+}
