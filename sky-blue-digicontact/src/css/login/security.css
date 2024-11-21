@@ -1,0 +1,15 @@
+.page-security{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+}
+.error-security{
+    font-size: 14px;
+    font-weight: 500;
+    color: #f60909;
+}
+.zi-warning{
+    color: #f60909 !important;
+    font-size: 18px;
+    margin-right: 5px;
+}

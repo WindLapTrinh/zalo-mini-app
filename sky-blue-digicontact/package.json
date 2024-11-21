@@ -1,0 +1,51 @@
+{
+  "name": "capcenter-digicontact",
+  "private": true,
+  "version": "1.0.0",
+  "description": "CapCenter Digicontact",
+  "repository": "",
+  "license": "UNLICENSED",
+  "browserslist": [
+    "Android >= 5",
+    "IOS >= 9.3",
+    "Edge >= 15",
+    "Safari >= 9.1",
+    "Chrome >= 49",
+    "Firefox >= 31",
+    "Samsung >= 5"
+  ],
+  "scripts": {
+    "start": "zmp start",
+    "deploy": "zmp deploy",
+    "build:css": "postcss src/css/tailwind.css -o src/css/styles.css"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "chart.js": "^4.4.3",
+    "crypto-js": "^4.2.0",
+    "date-fns": "^3.3.1",
+    "html-react-parser": "^5.1.10",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.3.0",
+    "react-router-dom": "^6.23.0",
+    "recoil": "^0.7.7",
+    "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.12.4",
+    "zmp-sdk": "^2.35.5",
+    "zmp-ui": "^1.9.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react-refresh": "^1.3.6",
+    "autoprefixer": "^10.4.17",
+    "cross-env": "^7.0.3",
+    "postcss": "^8.4.35",
+    "postcss-cli": "^8.3.1",
+    "postcss-preset-env": "^6.7.0",
+    "sass": "^1.71.1",
+    "tailwindcss": "^3.4.1",
+    "vite": "^2.9.18"
+  }
+}

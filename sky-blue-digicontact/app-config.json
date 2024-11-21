@@ -1,0 +1,25 @@
+{
+  "app": {
+    "title": "APO English",
+    "headerColor": "",
+    "textColor": "white",
+    "statusBarColor": "#8861bb",
+    "leftButton": "none",
+    "statusBar": "normal",
+    "selfControlLoading": false,
+    "hideAndroidBottomNavigationBar": false,
+    "hideIOSSafeAreaBottom": false,
+    "actionBarHidden": true,
+    "textAlign": "left"
+  },
+  "debug": false,
+  "listCSS": [],
+  "listSyncJS": [],
+  "listAsyncJS": [],
+  "template": {
+    "primaryColor": "#028090",
+    "prefixCurrencySymbol": false,
+    "currencySymbol": "đ",
+    "headerLogo": ""
+  }
+}

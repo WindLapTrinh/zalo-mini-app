@@ -1,0 +1,9 @@
+.page-student{
+    background-image: url("../../../public/images/icon/backgroud-student.png");
+    background-position: left center;
+    background-size: auto 100%; 
+    background-repeat: no-repeat; 
+}
+.header-student{
+    text-align: center;
+}

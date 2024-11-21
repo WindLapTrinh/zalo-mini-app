@@ -1,0 +1,13 @@
+.page-fillters-student{
+    background-color: #ffffff;
+    padding: 73px 10px;
+}
+.item-fillters-student{
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box-shadow */  
+    padding: 24px 10px;
+}
+.page-list-curriculum{
+    margin-top: 10px;
+}

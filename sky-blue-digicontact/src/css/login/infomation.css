@@ -1,0 +1,27 @@
+
+.link-admin {
+    display: flex;
+    align-items: center;
+}
+.icphone-login{
+    margin-left: 10px;
+    font-size: 20px;
+    color: #30c840;
+}
+.page-infomation {
+   
+    color: #8861bb;
+    width: 100%;
+    height: auto;
+    background: #ffffff;
+}
+.logo-infomation{
+    width: 39px;
+  height: auto;
+}
+.text-success {
+    font-size: 14px;
+    padding: 0px 5px;
+    color: #333;
+    font-weight: 500;
+  }

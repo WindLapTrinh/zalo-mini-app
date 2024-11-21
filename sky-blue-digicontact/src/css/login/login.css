@@ -1,0 +1,25 @@
+.page-login{
+  background-color: white;
+  height: auto;
+  overflow: hidden;
+}
+.header-login{
+  background: linear-gradient(to bottom, rgb(136 97 187), rgb(136 97 187));
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box-shadow */
+
+}
+
+.btn-login{
+  background-color: #8861bb;
+  color: #fff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.btn-login:hover{
+  background-color: #c9abf0;
+  transition: 0.5s;
+}
+.body-login{
+  padding: 0px 10px;
+}

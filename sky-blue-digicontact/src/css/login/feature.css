@@ -1,0 +1,41 @@
+.page-feature{
+  padding: 0px 10px 5px 10px;
+}
+
+.feature-container {
+    display: flex;
+    justify-content: space-between;
+}
+.header-feature{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.title-header-feature{
+    margin: 10px 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+  .feature-box {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    background-color: white;
+    text-align: left;
+    border-radius: 8px;
+    padding: 6px 6px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  }
+  
+  .feature-title {
+    font-size: 14px;
+    margin-left: 5px;
+    font-weight: 500;
+    color: #30c840;
+  }
+  .icon-feature{
+    width: 39px;
+    height: 29px;
+  }

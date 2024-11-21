@@ -3,11 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { Box, Input, Button, Text } from "zmp-ui";
 import useToast from "../shared/hooks/useToast";
 import CustomHeader from "../shared/pages/CustomHeader";
-import axios from "axios";
+import axiosClient from "../shared/config/axios";
+import useAuth from "../shared/hooks/useAuth"; // Import custom hook
 import "../../css/login/home.css";
 
 const Home = () => {
   const navigate = useNavigate();
+  const { saveToken } = useAuth(); // Sử dụng hook để lưu token
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -37,19 +39,24 @@ const Home = () => {
     setLoading(true);
   
     try {
-      const response = await axios.post(
-        `https://demo-x.ileader.vn/api/MiniApp/CheckUser?userName=${userName}&pass=${password}`
+      const response = await axiosClient.post(
+        `api/MiniApp/CheckUser?userName=${userName}&pass=${password}`,
+        { withCredentials: true } // Đảm bảo vớiCredentials là true để gửi cookie
       );
   
       const data = response.data; // Lấy data từ response
       console.log(data);
   
-      if (data.success == true) {
-        localStorage.setItem("userGuid", data.message);
+      if (data.success === true) {
+        // Lưu token vào cookie sau khi login thành công
+        const token = data.message; // Giả sử token là message trong response
+        saveToken(token);  // Lưu token vào cookie và state
   
-        navigate("/homePage", { state: { guid: data.message } });
+        localStorage.setItem("guidTeacher", token);
+  
+        navigate("/class", { state: { guidTeacher: token } });
       } else {
-        showToast("Tên đăng nhập hoặc mật khẩu không đúng!", 2000);
+        setApiError("Tên đăng nhập hoặc mật khẩu không đúng!");
       }
     } catch (error) {
       if (error.response) {
@@ -65,7 +72,6 @@ const Home = () => {
       setLoading(false); // Đảm bảo trạng thái loading luôn được tắt
     }
   };
-  
 
   return (
     <Box>
@@ -97,16 +103,22 @@ const Home = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           {passwordError && (
-            <Text size="small" color="danger" className="error-text">
+            <Text size="small" color="danger" className="error-text" mb={2}>
               {passwordError}
             </Text>
           )}
 
+          {apiError && (
+            <Text size="small" color="danger" className="error-text" mb={2}>
+              {apiError}
+            </Text>
+          )}
           <Button
             type="primary"
             className="login-button"
             onClick={handleOnClickLogin}
-            loading={loading}
+            loading={loading} 
+            mt={2}
           >
             Login
           </Button>

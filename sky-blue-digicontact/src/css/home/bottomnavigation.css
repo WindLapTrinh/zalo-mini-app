@@ -1,0 +1,6 @@
+.icon-active{
+    color: #8861bb;
+}
+.zaui-bottom-navigation-content::after{
+    background-color: unset;
+}

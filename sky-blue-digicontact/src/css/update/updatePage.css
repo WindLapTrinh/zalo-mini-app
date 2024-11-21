@@ -1,0 +1,36 @@
+body {
+  background-color: white;
+}
+.update-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 100vh;
+}
+
+.update-content {
+  text-align: center;
+}
+
+.update-image {
+  width: 340px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+.update-message {
+  color: #333;
+  text-align: left;
+}
+.btn-home-update {
+  background-color: #8861bb;
+  margin-top: 10px;
+}
+.btn-home-update:hover {
+  background-color: #bf9cec;
+  transition: 0.5s;
+}

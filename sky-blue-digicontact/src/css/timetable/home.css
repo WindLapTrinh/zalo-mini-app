@@ -1,0 +1,61 @@
+.page-timetable {
+  background-color: #ffffff;
+}
+.timetable-container {
+  overflow-x: auto;
+  padding-bottom: 90px;
+}
+
+.timetable-item {
+  margin-bottom: 30px;
+}
+
+.timetable-date {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.timetable-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.timetable-table th,
+.timetable-table td {
+  word-wrap: break-word; /* Handle long content by wrapping */
+}
+.timetable-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.timetable-table th {
+  border: 1px solid #ddd; 
+  padding: 8px;
+  background-color: #8861bb;
+  color: white;
+  text-align: left;
+  white-space: nowrap;
+}
+.timetable-table .day-of-week th {
+  text-align: center !important;
+}
+.item-day-week .item-data-week{
+    padding: 0px;
+}
+.item-day-week .item-data-week tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* Màu nền cho dòng lẻ */
+    color: black;
+  }
+  
+  /* Định nghĩa màu cho các dòng chẵn */
+.item-day-week .item-data-week tr:nth-child(even) {
+    background-color: #a17fce30;
+    color: black;
+}
+.item-day-week .item-dropout{
+    padding: 8px;
+}

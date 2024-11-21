@@ -1,0 +1,11 @@
+.page-class{
+    height: 100vh;
+}
+.box-class{
+    background-color: #ffffff;
+    margin-top: 45px;
+    height: 100%;
+}
+.zaui-list .zaui-list-item:not(:last-child){
+    margin-bottom: 0px !important;
+}
