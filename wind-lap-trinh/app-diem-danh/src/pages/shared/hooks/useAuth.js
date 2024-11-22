@@ -1,30 +1,32 @@
 import { useState, useEffect } from "react";
 
-// Hook để quản lý cookie (token) trong ứng dụng
 const useAuth = () => {
   const [token, setToken] = useState(null);
 
-  // Kiểm tra cookie khi component mount
   useEffect(() => {
-    const cookie = document.cookie
-      .split("; ")
-      .find(row => row.startsWith("authToken="));
+    try {
+      const cookie = document.cookie
+        .split("; ")
+        .find(row => row.startsWith("authToken="));
 
-    if (cookie) {
-      const tokenValue = cookie.split("=")[1];
-      setToken(tokenValue);
+      if (cookie) {
+        const tokenValue = cookie.split("=")[1];
+        setToken(tokenValue);
+      }
+    } catch (error) {
+      console.error("Error reading auth token from cookies:", error);
     }
   }, []);
 
-  // Lưu token vào cookie
   const saveToken = (token) => {
-    document.cookie = `authToken=${token}; path=/;`;
+    const expiryDate = new Date();
+    expiryDate.setDate(expiryDate.getDate() + 7); // Token hết hạn sau 7 ngày
+    document.cookie = `authToken=${token}; path=/; expires=${expiryDate.toUTCString()}; Secure; SameSite=Strict`;
     setToken(token);
   };
 
-  // Xóa token
   const removeToken = () => {
-    document.cookie = "authToken=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+    document.cookie = "authToken=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC; Secure; SameSite=Strict";
     setToken(null);
   };
 

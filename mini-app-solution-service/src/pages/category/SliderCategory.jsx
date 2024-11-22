@@ -10,28 +10,28 @@ const SliderCategory = () => {
           <Swiper.Slide>
             <img
               className="slide-img"
-              src="/images/product/iphone-15-promax-den-1.jpg"
+              src="/images/product/product-1.jpg"
               alt="slide-2"
             />
           </Swiper.Slide>
           <Swiper.Slide>
             <img
               className="slide-img"
-              src="/images/product/iphone-15-promax-trang-1.jpg"
+              src="/images/product/product-2.jpg"
               alt="slide-2"
             />
           </Swiper.Slide>
           <Swiper.Slide>
             <img
               className="slide-img"
-              src="/images/product/iphone-15-promax-xanh-1.jpg"
+              src="/images/product-3.jpg"
               alt="slide-3"
             />
           </Swiper.Slide>
           <Swiper.Slide>
             <img
               className="slide-img"
-              src="/images/product/iphone-15-promax-xanh-vang-1.jpg"
+              src="/images/product/product-4.jpg"
               alt="slide-3"
             />
           </Swiper.Slide>

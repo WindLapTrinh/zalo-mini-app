@@ -20,7 +20,7 @@ const Home = () => {
     try {
       setLoading(true);
       const response = await axios.get(
-        `https://demo-x.ileader.vn/api/Class/GetListClassMiniApp?guidemployee=6b4b583b-d072-4246-800b-82ecf50c9cb4`
+        `https://demo-x.ileader.vn/api/Class/GetListClassMiniApp?guidemployee=${guidTeacher}`
       );
       console.log("Data Res", response);
       if (response.data.success) {

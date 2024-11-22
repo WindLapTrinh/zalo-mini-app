@@ -4,81 +4,73 @@ import { Box, Input, Button, Text } from "zmp-ui";
 import useToast from "../shared/hooks/useToast";
 import CustomHeader from "../shared/pages/CustomHeader";
 import axiosClient from "../shared/config/axios";
-import useAuth from "../shared/hooks/useAuth"; // Import custom hook
+import useAuth from "../shared/hooks/useAuth";
 import "../../css/login/home.css";
 
 const Home = () => {
   const navigate = useNavigate();
-  const { saveToken } = useAuth(); // Sử dụng hook để lưu token
+  const { saveToken } = useAuth();
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const [usernameError, setUsernameError] = useState(""); 
-  const [passwordError, setPasswordError] = useState("");
-  const [apiError, setApiError] = useState("");
+  const [errors, setErrors] = useState({ username: "", password: "", api: "" });
   const showToast = useToast();
 
+  const handleError = (field, message) => {
+    setErrors((prev) => ({ ...prev, [field]: message }));
+  };
+
   const handleOnClickLogin = async () => {
-    setUsernameError("");
-    setPasswordError("");
-    setApiError("");
+    setErrors({ username: "", password: "", api: "" });
     let isValid = true;
-  
+
     if (!userName) {
-      setUsernameError("Tên đăng nhập không được để trống.");
+      handleError("username", "Tên đăng nhập không được để trống.");
       isValid = false;
     }
-  
+
     if (!password) {
-      setPasswordError("Mật khẩu không được để trống.");
+      handleError("password", "Mật khẩu không được để trống.");
       isValid = false;
     }
-  
+
     if (!isValid) return;
-  
+
     setLoading(true);
-  
+
     try {
       const response = await axiosClient.post(
         `api/MiniApp/CheckUser?userName=${userName}&pass=${password}`,
-        { withCredentials: true } // Đảm bảo vớiCredentials là true để gửi cookie
+        { withCredentials: true }
       );
-  
-      const data = response.data; // Lấy data từ response
-      console.log(data);
-  
-      if (data.success === true) {
-        // Lưu token vào cookie sau khi login thành công
-        const token = data.message; // Giả sử token là message trong response
-        saveToken(token);  // Lưu token vào cookie và state
-  
-        localStorage.setItem("guidTeacher", token);
-  
-        navigate("/class", { state: { guidTeacher: token } });
-      } else {
-        setApiError("Tên đăng nhập hoặc mật khẩu không đúng!");
-      }
-    } catch (error) {
-      if (error.response) {
-        setApiError(error.response.data?.message || "Có lỗi xảy ra.");
-      } else if (error.request) {
-        setApiError("Không thể kết nối đến server. Vui lòng kiểm tra lại kết nối.");
-      } else {
-        setApiError("Đã xảy ra lỗi không xác định.");
-      }
-      showToast("Có lỗi xảy ra. Vui lòng thử lại!", 2000);
 
+      const data = response.data;
+      console.log("Data:", data);
+      // if (data.success === true) {
+      //   const token = data.message; // Giả sử token là message trong response
+      //   saveToken(token);
+      //   localStorage.setItem("guidTeacher", token);
+
+      //   navigate("/class", { state: { guidTeacher: token } });
+      // } else {
+      //   handleError("api", "Tên đăng nhập hoặc mật khẩu không đúng!");
+      // }
+    } catch (error) {
+      const errorMessage =
+        error.response?.data?.message ||
+        "Không thể kết nối đến server. Vui lòng thử lại.";
+      handleError("api", errorMessage);
+      showToast("Có lỗi xảy ra. Vui lòng thử lại!", 2000);
     } finally {
-      setLoading(false); // Đảm bảo trạng thái loading luôn được tắt
+      setLoading(false);
     }
   };
 
   return (
     <Box>
-      <CustomHeader title={"App Điểm Danh"} />
+      <CustomHeader imageUrl={"./images/logo/ileader-white.png"} />
       <Box className="login-page" p={4}>
         <Box className="login-container" p={4}>
-          {/* Username Input */}
           <Input
             type="text"
             placeholder="Username"
@@ -87,13 +79,12 @@ const Home = () => {
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
           />
-          {usernameError && (
+          {errors.username && (
             <Text size="small" color="danger" className="error-text">
-              {usernameError}
+              {errors.username}
             </Text>
           )}
 
-          {/* Password Input */}
           <Input
             type="password"
             placeholder="Password"
@@ -102,22 +93,23 @@ const Home = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          {passwordError && (
+          {errors.password && (
             <Text size="small" color="danger" className="error-text" mb={2}>
-              {passwordError}
+              {errors.password}
             </Text>
           )}
 
-          {apiError && (
+          {errors.api && (
             <Text size="small" color="danger" className="error-text" mb={2}>
-              {apiError}
+              {errors.api}
             </Text>
           )}
+
           <Button
             type="primary"
             className="login-button"
             onClick={handleOnClickLogin}
-            loading={loading} 
+            loading={loading}
             mt={2}
           >
             Login
