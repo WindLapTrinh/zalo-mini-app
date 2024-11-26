@@ -4,13 +4,13 @@ import "../styles/app.css";
 
 const ReviewAllDate = ({ onClickDate }) => {
   return (
-    <Box mt={5} mb={5} className="box-review-all">
+    <Box className="box-review-all">
       <Button
         className="btn-review-all-data"
-        onClick={onClickDate} // Sử dụng props để gọi hàm từ parent
+        onClick={onClickDate} 
         size="large"
       >
-        Xem tất cả
+        Điểm danh
       </Button>
     </Box>
   );

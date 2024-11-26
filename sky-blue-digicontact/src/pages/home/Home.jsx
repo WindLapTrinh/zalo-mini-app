@@ -8,7 +8,6 @@ import Infomation from "./Infomation.jsx";
 import CreateShortcuts from "./CreateShortcuts.jsx";
 import BottomNavigationComponent from "../shared/components/BottomNavigationComponent";
 import {openChatScreen} from "../shared/utils/openChatScreen.js";
-import useUser from "../shared/hooks/useUser.js"
 import CustomHeader from "../shared/pages/CustomHeader.jsx";
 import "../../css/home/home.css";
 
@@ -18,10 +17,7 @@ const Home = () => {
   const { studentName, studentGuid, phoneNumber } = location.state || {};
   console.log("Name home", studentName);
   console.log("Guid Students",studentGuid);
-   // Sử dụng useUser để lấy thông tin người dùng
-   const { userInfo, loading, error } = useUser();
-   console.log("Name", userInfo && userInfo.name || "");
-
+  
    const handleBackClick = () => {
     if (studentName) {
       navigate("/students", {state: {phoneNumber}});

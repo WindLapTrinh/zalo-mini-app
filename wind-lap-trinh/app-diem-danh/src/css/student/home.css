@@ -1,0 +1,67 @@
+.box-student {
+  background-color: #ffffff;
+  height: 100%;
+  margin-top: 46px;
+  padding: 10px 10px;
+  margin-bottom: 66px;
+}
+.box-search {
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sum-student {
+  display: flex;
+  align-items: center;
+}
+.student-rollcall {
+  padding: 8px 20px;
+  background: #30c840;
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box-shadow */
+  margin: 0px 5px;
+}
+.student-inclass {
+  padding: 8px 20px;
+  background: #c9c9c9;
+  color: #4f4f4f;
+  font-weight: 500;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box-shadow */
+}
+.check-all {
+    padding: 5px 10px;
+    border-radius: 8px;
+    color: white;
+    background: red;
+    width: 84px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.item-student {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  border-radius: 5px;
+  color: black;
+  border-left: 5px solid #30c840;
+  margin: 5px 0px 0px 0px !important;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box-shadow */
+  padding: 14px;
+}
+.image-student {
+  width: 60px;
+  height: auto;
+}
+.zaui-checkbox-checked .zaui-checkbox-inner {
+  background-color: #30c840 !important;
+}
