@@ -20,7 +20,7 @@ const Infomation = () => {
           className="update-image"
         />
         <Text className="update-message" size="large" bold mt={4}>
-          Số điện thoại không có thông tin học viên tại trung tâm! Liên hệ để được hỗ trợ.
+          Số điện thoại không có thông tin lớp học tại trung tâm! Liên hệ để được hỗ trợ.
         </Text>
         <Button 
           className="btn-home-update" 

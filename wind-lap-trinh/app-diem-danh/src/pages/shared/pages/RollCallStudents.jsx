@@ -2,12 +2,12 @@ import React from "react";
 import { Box, Button } from "zmp-ui";
 import "../styles/app.css";
 
-const ReviewAllDate = ({ onClickDate }) => {
+const RollCallStudents = ({ onClickRollCall }) => {
   return (
     <Box className="box-review-all">
       <Button
         className="btn-review-all-data"
-        onClick={onClickDate} 
+        onClick={onClickRollCall} 
         size="large"
       >
         Điểm danh
@@ -16,4 +16,4 @@ const ReviewAllDate = ({ onClickDate }) => {
   );
 };
 
-export default ReviewAllDate;
+export default RollCallStudents;

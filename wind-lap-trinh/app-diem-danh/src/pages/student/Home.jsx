@@ -1,36 +1,50 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import axiosClient from "../shared/config/axios";
 import { Box, List, Input, Checkbox, Button, Text } from "zmp-ui";
 import CustomHeader from "../shared/pages/CustomHeader";
-import ReviewAllData from "../shared/pages/ReviewAllData";
+import RollCallStudents from "../shared/pages/RollCallStudents";
 import "../../css/student/home.css";
 
 const { Item } = List;
 
-const Home = () => {
-  // Dữ liệu mẫu
-  const [students, setStudents] = useState([
-    { id: 1, name: "Lê Văn Hải", age: 2, checked: false },
-    { id: 2, name: "Nguyễn Thị Lan", age: 3, checked: false },
-    { id: 3, name: "Trần Đức Minh", age: 4, checked: false },
-    { id: 4, name: "Phạm Thị Hạnh", age: 2, checked: false },
-    { id: 5, name: "Nguyễn Văn Nam", age: 5, checked: false },
-    { id: 6, name: "Hoàng Thị Mai", age: 4, checked: false },
-    { id: 7, name: "Vũ Văn Khánh", age: 3, checked: false },
-    { id: 8, name: "Đinh Thị Hoa", age: 2, checked: false },
-    { id: 9, name: "Trần Quang Huy", age: 3, checked: false },
-    { id: 10, name: "Ngô Thị Ngọc", age: 4, checked: false },
-    { id: 11, name: "Lê Thị Hương", age: 2, checked: false },
-    { id: 12, name: "Bùi Văn Phúc", age: 5, checked: false },
-    { id: 13, name: "Trần Thị Thanh", age: 4, checked: false },
-    { id: 14, name: "Nguyễn Văn Tú", age: 3, checked: false },
-    { id: 15, name: "Phan Thị Nga", age: 2, checked: false },
-    { id: 16, name: "Hoàng Văn Tiến", age: 5, checked: false },
-  ]);
-
+const StudentsHome = () => {
+  const location = useLocation();
+  const [students, setStudents] = useState([]);
   const [rollcall, setRollcall] = useState(0);
-  const inClass = students.length;
+  const [searchTerm, setSearchTerm] = useState(''); // State quản lý tìm kiếm
+  const [checkAll, setCheckAll] = useState(false); // State quản lý chọn tất cả
 
-  // Xử lý khi chọn/bỏ chọn sinh viên
+  const guid = location.state?.guid;
+  const className = location.state?.className;
+
+  useEffect(() => {
+    const fetchStudents = async () => {
+      if (!guid) {
+        console.error("GUID không được cung cấp.");
+        return;
+      }
+      try {
+        const response = await axiosClient.get(
+          `api/Class/GetListStudentAttendanceMiniApp?strClassGuid=${guid}`,
+          { responseType: "json" }
+        );
+        const studentsData = JSON.parse(response.data.data);
+        const formattedStudents = studentsData.map((student) => ({
+          id: student.StudentGuid,
+          name: student.StudentName,
+          phone: student.StudentPhone,
+          checked: false,
+        }));
+        setStudents(formattedStudents);
+      } catch (error) {
+        console.error("Lỗi khi lấy danh sách học sinh:", error.message);
+      }
+    };
+
+    fetchStudents();
+  }, [guid]);
+
   const onSelectStudent = (studentId) => {
     setStudents((prevStudents) =>
       prevStudents.map((student) => {
@@ -46,41 +60,73 @@ const Home = () => {
     );
   };
 
-  // Xử lý Check All
-  const toggleCheckAll = (checkAll) => {
+  const handleCheckAll = () => {
+    const newCheckAllStatus = !checkAll;
+    setCheckAll(newCheckAllStatus);
     setStudents((prevStudents) =>
-      prevStudents.map((student) => ({ ...student, checked: checkAll }))
+      prevStudents.map((student) => ({
+        ...student,
+        checked: newCheckAllStatus,
+      }))
     );
-    setRollcall(checkAll ? inClass : 0);
+    setRollcall(newCheckAllStatus ? students.length : 0); // Update rollcall count based on selection
   };
+
+  const handleSendToServer = async () => {
+    const selectedStudents = students
+      .filter((student) => student.checked)
+      .map((student) => student.id);
+    console.log("List Guid RollCall By Students:", selectedStudents);
+    if (selectedStudents.length === 0) {
+      alert("Vui lòng chọn ít nhất một học sinh!");
+      return;
+    }
+
+    try {
+      const response = await axiosClient.post(
+        "https://your-api-endpoint.com/api/SubmitSelectedStudents",
+        { studentGuids: selectedStudents }
+      );
+
+      alert("Gửi dữ liệu thành công!");
+      console.log("Phản hồi từ server:", response.data);
+    } catch (error) {
+      console.error("Lỗi khi gửi dữ liệu:", error.message);
+      alert("Có lỗi xảy ra khi gửi dữ liệu!");
+    }
+  };
+
+  const handleSearchChange = (value) => {
+    setSearchTerm(value); // Cập nhật giá trị tìm kiếm
+  };
+
+  // Lọc danh sách học sinh
+  const filteredStudents = students.filter((student) =>
+    student.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <Box className="page-student">
-      <CustomHeader title={"Danh sách vào lớp"} showBackIcon={"true"} />
+      <CustomHeader title={`${className}`} showBackIcon={true} />
       <Box className="box-student">
-        {/* Tìm kiếm */}
         <Box className="box-search">
           <Input.Search
             placeholder="Tìm kiếm học sinh..."
             size="small"
-            onSearch={(value) => {
-              console.log(value);
-            }}
+            onChange={(e) => handleSearchChange(e.target.value)}
           />
           <Box className="sum-student">
             <Box className="student-rollcall">{rollcall}</Box>
-            <Box className="student-inclass">{inClass}</Box>
+            <Box className="student-inclass">{students.length}</Box>
           </Box>
+          
         </Box>
-
-        <Box className="box-check-all" onClick={() => toggleCheckAll(true)}>
-          <Text className="check-all">Check All</Text>
+        <Box className="box-check-all"  onClick={handleCheckAll}>
+        <Text className="check-all">{checkAll ? "Bỏ chọn" : "Tất cả"}</Text>
         </Box>
-
-        {/* Danh sách học sinh */}
         <Box className="box-list-student">
           <List>
-            {students.map((student) => (
+            {filteredStudents.map((student) => (
               <Item
                 key={student.id}
                 prefix={
@@ -91,7 +137,7 @@ const Home = () => {
                   />
                 }
                 title={<p className="title-login">{student.name}</p>}
-                subTitle={<p className="date-user">{student.age} tuổi</p>}
+                subTitle={<p className="date-user">{student.phone}</p>}
                 suffix={
                   <Checkbox
                     checked={student.checked}
@@ -103,10 +149,10 @@ const Home = () => {
             ))}
           </List>
         </Box>
+        <RollCallStudents onClickRollCall={handleSendToServer} />
       </Box>
-      <ReviewAllData />
     </Box>
   );
 };
 
-export default Home;
+export default StudentsHome;

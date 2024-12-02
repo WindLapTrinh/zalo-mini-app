@@ -17,9 +17,11 @@ const MyApp = () => {
         <SnackbarProvider>
           <ZMPRouter>
             <AnimationRoutes>
-              {/* <Route path="/" element={<Login></Login>}></Route> */}
+              <Route path="/" element={<Login></Login>}></Route>
+              {/* <Route path="/" element={<Class setTasks={setTasks} tasks={tasks} />} /> */}
+
               <Route path="/class" element={<Class setTasks={setTasks} tasks={tasks} />} />
-              <Route path="/" element={<Student setTasks={setTasks} tasks={tasks} />} />
+              <Route path="/students" element={<Student setTasks={setTasks} tasks={tasks} />} />
             </AnimationRoutes>
           </ZMPRouter>
         </SnackbarProvider>
